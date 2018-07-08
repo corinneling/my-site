@@ -16,7 +16,6 @@ function findDirection(event) {
     degree = (radius * 5);
     
     containers.style.transform = `
-    rotate3d(${tiltx}, ${tilty}, 0, ${degree}deg)
     translate(${tiltx}rem, ${tilty}rem)
     `;
 }
