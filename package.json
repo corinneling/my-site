@@ -4,13 +4,55 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass scss/ -o dist/css/ --output-style"
+    "prestart": "npm run clean",
+    "start": "npm-run-all -s sass html -p js watch server",
+    "build": "npm-run-all -s sass html js:prod",
+    "clean": "rimraf dist/",
+    "server": "node tasks/server",
+    "stylelint": "node tasks/stylelint",
+    "html": "node tasks/html",
+    "sass": "node tasks/sass",
+    "js": "node tasks/webpack",
+    "js:prod": "webpack --colors --display-chunks",
+    "watch": "node tasks/watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sparkbox/stylelint-config-sparkbox": "^0.2.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^7.1.4",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-preset-env": "^1.7.0",
+    "chokidar": "^2.0.4",
+    "colors": "^1.3.2",
+    "compression": "^1.7.3",
+    "css-loader": "^2.0.0",
+    "dotenv": "^6.2.0",
     "express": "^4.16.3",
-    "node-sass": "^4.9.0"
+    "front-matter": "^3.0.1",
+    "globby": "^8.0.1",
+    "handlebars": "^4.0.12",
+    "helmet": "^3.13.0",
+    "helper-markdown": "^1.0.0",
+    "highlight.js": "^9.13.1",
+    "markdown-to-html": "0.0.13",
+    "moment": "^2.22.2",
+    "node-sass": "^3.13.1",
+    "npm-run-all": "^4.1.3",
+    "opener": "^1.5.1",
+    "rimraf": "^2.6.2",
+    "shelljs": "^0.8.2",
+    "style-loader": "^0.23.1",
+    "stylelint-scss": "^3.4.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "pa11y": "^5.0.4",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0"
   }
 }
