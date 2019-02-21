@@ -29,7 +29,8 @@ module.exports = {
   plugins: [
     new MinifyPlugin(),
     new CopyWebpackPlugin([
-      {from:'src/images',to:'../images'} 
+      {from:'src/images',to:'../images'},
+      {from:'src/font',to:'../font'} 
     ])
   ]
 };
