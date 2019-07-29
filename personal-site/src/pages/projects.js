@@ -1,13 +1,12 @@
 import React from 'react';
-import Header from "../components/header/header";
-import("../scss/base.scss")
+import Layout from '../components/layout'
+
 
 const Projects = () => {
   return (
-    <main class="cmp-container">
-      <Header />
+    <Layout>
       <h1>Projects</h1>
-    </main>
+    </Layout>
   )
 }
 

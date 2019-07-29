@@ -1,11 +1,9 @@
 import React from "react";
-import Header from "../components/header/header";
+import Layout from '../components/layout'
 import Card from "../components/card/card";
-import("../scss/base.scss")
 
 export default () => (
-  <main class="cmp-container">
-    <Header />
+  <Layout>
     <Card />
-  </main>
+  </Layout>
 )
