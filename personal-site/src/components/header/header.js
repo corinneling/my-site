@@ -7,7 +7,7 @@ const Header = () => {
       <nav className="cmp-nav">
         <ul className="cmp-nav__list">
           <li className="cmp-nav__item">
-            <Link to="/">Home</Link>
+            <Link to="/" className="cmp-nav__link">Home</Link>
           </li>
           <li className="cmp-nav__item">
             <Link to="/projects/" className="cmp-nav__link">Projects</Link>
