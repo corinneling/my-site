@@ -1,59 +1,34 @@
 {
-  "name": "peronsal_site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "name": "personal-site",
+  "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "MIT",
   "scripts": {
-    "prestart": "npm run clean",
-    "start": "npm-run-all -s sass html -p js watch server",
-    "build": "npm-run-all -s sass html js:prod",
-    "clean": "rimraf dist/",
-    "server": "node tasks/server",
-    "stylelint": "node tasks/stylelint",
-    "html": "node tasks/html",
-    "sass": "node tasks/sass",
-    "js": "node tasks/webpack",
-    "js:prod": "webpack --colors --display-chunks",
-    "watch": "node tasks/watch"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@sparkbox/stylelint-config-sparkbox": "^0.2.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^7.1.4",
-    "babel-minify-webpack-plugin": "^0.3.1",
-    "babel-preset-env": "^1.7.0",
-    "chokidar": "^2.0.4",
-    "colors": "^1.3.2",
-    "compression": "^1.7.3",
-    "copy-webpack-plugin": "^4.6.0",
-    "css-loader": "^2.0.0",
-    "dotenv": "^6.2.0",
-    "express": "^4.16.3",
-    "front-matter": "^3.0.1",
-    "globby": "^8.0.1",
-    "handlebars": "^4.0.12",
-    "helmet": "^3.13.0",
-    "helper-markdown": "^1.0.0",
-    "highlight.js": "^9.13.1",
-    "markdown-to-html": "0.0.13",
-    "moment": "^2.22.2",
-    "node-sass": "^3.13.1",
-    "npm-run-all": "^4.1.3",
-    "opener": "^1.5.1",
-    "rimraf": "^2.6.2",
-    "shelljs": "^0.8.2",
-    "style-loader": "^0.23.1",
-    "stylelint-scss": "^3.4.1",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2",
-    "yamljs": "^0.3.0"
+    "gatsby": "^2.13.42",
+    "gatsby-plugin-sass": "^2.1.3",
+    "gatsby-source-filesystem": "^2.1.6",
+    "gatsby-transformer-remark": "^2.6.10",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "pa11y": "^5.0.4",
-    "stylelint": "^9.9.0",
-    "stylelint-config-standard": "^18.2.0"
+    "prettier": "^1.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

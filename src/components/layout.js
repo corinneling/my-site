@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react'
+import React from 'react';
 import Header from "../components/header/header";
-import("../scss/base.scss")
+import("../scss/base.scss");
 
  const Layout = ({ children }) => (
-  <Fragment>
+  <div className="l--site-container">
     <Header />
-    <main class="cmp-container">
+    <main>
       {children}
     </main>
-  </Fragment>
+  </div>
 )
 
 export default Layout;

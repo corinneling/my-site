@@ -12,6 +12,7 @@
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.125);
   }
 
+
   &__title {
     font-size: 2rem;
     margin: 2rem 0 1rem;
@@ -25,5 +26,9 @@
     font-size: 1.35rem;
     line-height: 2;
     margin: 2rem 0;
+  }
+
+  &__intro {
+    display: block;
   }
 }
