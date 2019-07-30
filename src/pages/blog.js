@@ -8,7 +8,8 @@ const Blog = ({ data }) => {
     <Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Blog | Full Stack Web Developer | Corinne Ling</title>
+        <title>Blog | Web Developer | Corinne Ling</title>
+        <meta name="description" content="A place to put my thoughts as I go through tutorials and learn new things." />
       </Helmet>
       <Layout>
         <div class="l--blog">

@@ -7,7 +7,8 @@ const Projects = () => {
     <Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>My Projects | Full Stack Web Developer | Corinne Ling</title>
+        <title>My Projects | Web Developer | Corinne Ling</title>
+        <meta name="description" content="Front-end projects I've worked on that taught me more about web development." />
       </Helmet>
       <Layout>
         <section class="cmp-cta">

@@ -8,6 +8,7 @@ export default () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Full Stack Web Developer | Corinne Ling</title>
+      <meta name="description" content="Experience with HTML, CSS, Sass, JS, React, and Php. Certified Web Accessibility Specialist." />
     </Helmet>
     <Layout>
       <Card />

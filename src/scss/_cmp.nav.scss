@@ -8,16 +8,15 @@
   }
 
   &__item {
-    float: left;
-    padding: 0.5rem 1rem;
+    display: inline-block;
   }
 
   &__link {
+    display: inline-block;
     color: $c-gray-2;
-    position: relative;
-    margin: 0;
-    text-align: center;
     text-decoration: none;
+    padding: 0.25rem;
+    margin: 0 0.5rem;
     font-size: 1.25rem;
     letter-spacing: 0.05rem;
     transition: color 200ms cubic-bezier(0.71, 0.55, 0.62, 1.37);

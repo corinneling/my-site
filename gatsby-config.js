@@ -32,6 +32,12 @@ module.exports = {
         icon: `src/images/woman-technologist.ico`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ]
