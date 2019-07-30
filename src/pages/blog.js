@@ -1,28 +1,35 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import Layout from '../components/layout'
 
 const Blog = ({ data }) => {
   return (
-    <Layout>
-      <div class="l--blog">
-        <h1>Blog</h1>
-        <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id}>
-              <Link to={node.fields.slug}>
-                <h3>
-                  {node.frontmatter.title}{" "}
-                  <span>
-                    — {node.frontmatter.date}
-                  </span>
-                </h3>
-                <p>{node.excerpt}</p>
-              </Link>
-            </div>
-          ))}
-      </div>
-    </Layout>
+    <Fragment>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Blog | Full Stack Web Developer | Corinne Ling</title>
+      </Helmet>
+      <Layout>
+        <div class="l--blog">
+          <h1>Blog</h1>
+          <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
+            {data.allMarkdownRemark.edges.map(({ node }) => (
+              <div key={node.id}>
+                <Link to={node.fields.slug}>
+                  <h3>
+                    {node.frontmatter.title}{" "}
+                    <span>
+                      — {node.frontmatter.date}
+                    </span>
+                  </h3>
+                  <p>{node.excerpt}</p>
+                </Link>
+              </div>
+            ))}
+        </div>
+      </Layout>
+    </Fragment>
   )
 }
 
