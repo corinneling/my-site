@@ -5,5 +5,17 @@
  */
 
 module.exports = {
-  plugins: [`gatsby-plugin-sass`]
+  siteMetadata: {
+    siteTitle: 'hello there'
+  },
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+  ]
 }
