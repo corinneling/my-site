@@ -3,8 +3,13 @@
 
   &__list {
     list-style: none;
+    margin: 1rem 0;
+    padding: 0;
     float: right;
-    margin: 1rem;
+
+    @media (min-width: $bp-sm) {
+      margin: 1rem;
+    }
   }
 
   &__item {
@@ -21,31 +26,27 @@
     letter-spacing: 0.05rem;
     transition: color 200ms cubic-bezier(0.71, 0.55, 0.62, 1.37);
 
-    &:hover {
-      color: #fff;
-    }
-
     &::before {
       content: "";
       display: block;
       position: relative;
       z-index: -1;
-      top: 2rem;
+      top: 1.75rem;
       left: 0;
       width: 100%;
-      height: 0.25rem;
+      height: 0.125rem;
       border-radius: 0.125rem;
       background-color: $c-gray-2;
       background-size: 130% 130%;
       background-position: 0% 50%;
-      transform: scale(1.125, 1) translateX(-0.125rem);
+      transform: scale(1);
       transform-origin: 10% 100%;
       transition: transform 200ms cubic-bezier(0.71, 0.55, 0.62, 1.37);
     }
 
     &:hover::before {
       border-radius: 0;
-      transform: scale(1.0625, 8.5) translateX(-0.125rem);
+      transform: scale(1, 4);
     }
   }
 }

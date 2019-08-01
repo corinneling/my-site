@@ -1,44 +1,36 @@
 .cmp-cta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  color: $c-gray-2;
+
+  &__wrapper {
+    margin: auto;
+    padding: 1rem 2rem;
+
+    @media (min-width: $bp-sm) {
+      max-width: 60vw;
+      padding: 1rem 0;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 2rem;
+    background-color: #222;
+    color: #fff; 
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__description {
+    display: inline;
+    border-bottom: 1px solid #222;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    vertical-align: text-top;
+  }
 
   &__link {
     text-decoration: none; 
     color: $c-gray-2;
-  }
-
-  &__title {
-    font-size: 2rem;
-    margin: 1rem 0 0;
-
-    @media (min-width: $bp-sm) {
-      font-size: 4.15rem;
-    }
-  }
-
-  &__subtitle {
-    font-size: 2rem;
-    padding: 0;
-    margin-bottom: 0.75rem;
-
-    @media (min-width: $bp-sm) {
-      font-size: 2.5rem;
-      display: block;
-    }
-
-    &--sub {
-      font-size: 2rem;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid #eee;
-
-      @media (min-width: $bp-sm) {
-        font-size: 1.725rem;
-        display: block;
-      }
-    }
   }
 
   &__item {
@@ -75,11 +67,11 @@
 
   &__content {
     width: 100vw;
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
 
     @media (min-width: $bp-sm) {
-      width: 60vw;
-      padding: 6rem 0;
+      max-width: 60vw;
+      padding: 4rem 0;
     }
   }
 }
