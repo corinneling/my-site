@@ -9,7 +9,7 @@ const aesthetica11y = {
   prop1: function() {
     const icons = document.querySelectorAll('.aesthetica11y__button');
     for (var i = 0; i < icons.length; i++) {
-      icons[i].style.backgroundColor == "" ? icons[i].style.backgroundColor = "#2B2B2B" : icons[i].style.backgroundColor = "";
+      icons[i].style.backgroundColor === "" ? icons[i].style.backgroundColor = "#2B2B2B" : icons[i].style.backgroundColor = "";
     }
   },
   prop2: function() {
@@ -35,29 +35,19 @@ const aesthetica11y = {
   }
 }
 
-function toggleClass(class) {
+function toggleClass(customClass) {
   const body = document.querySelector('body');
-  if (!body.classList.contains(class)) {
-    body.classList.add(class)
+  if (!body.classList.contains(customClass)) {
+    body.classList.add(customClass)
   } else {
-    body.classList.remove(class)
+    body.classList.remove(customClass)
   }
 }
 
-const panelButton = document.querySelector('.aesthetica11y-main-icon');
-function setIntialAria(element, aria, value) {
-  element.setAttribute(aria, value);
-}
-function openControlPanel() {
-  panelButton.addEventListener('click', toggleExpandedAria);
-},
-
-function toggleExpandedAria(e) {
-  const expandedValue = e.target.getAttribute('aria-expanded');
-  let setValue = expandedValue === 'true' ? 'false' : 'true';
-  e.target.setAttribute('aria-expanded', setValue);
+function initControlPanel() {
+  // setIntialAria(panelButton, 'aria-expanded', 'false');
+  // openControlPanel();
+  aesthetica11y.controlPanelEvents();
 }
 
-setIntialAria(panelButton, 'aria-expanded', 'false');
-openControlPanel();
-aesthetica11y.controlPanelEvents();
+export default initControlPanel
