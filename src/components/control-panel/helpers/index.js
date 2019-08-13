@@ -13,30 +13,28 @@ const aesthetica11y = {
     }
   },
   prop2: function() {
-    toggleClass('.js-add-contrast');
+    toggleClass('js-add-contrast');
   },
   prop3: function() {
-    toggleClass('.js-add-underline');
+    toggleClass('js-add-underline');
   },
   prop4: function() {
-    toggleClass('.js-add-letterspacing');
+    toggleClass('js-add-letterspacing');
   },
   prop5: function() {
-    toggleClass('.js-add-lineheight');
+    toggleClass('js-add-lineheight');
   },
   prop6: function() {
-    toggleClass('.js-add-dyslexie');
+    toggleClass('js-add-dyslexie');
   },
   prop7: function() {
-    const els = document.querySelectorAll("*");
-    els.forEach((el) => {
-      el.removeAttribute("style");
-    });
+    document.querySelector('body').removeAttribute("class")
   }
 }
 
 function toggleClass(customClass) {
   const body = document.querySelector('body');
+  body.removeAttribute("class")
   if (!body.classList.contains(customClass)) {
     body.classList.add(customClass)
   } else {

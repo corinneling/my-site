@@ -1,3 +1,21 @@
+.js-add-contrast {
+  background-color: #222 !important;
+}
+
+.js-add-contrast h1,
+.js-add-contrast h2,
+.js-add-contrast h3,
+.js-add-contrast p,
+.js-add-contrast a {
+  color: white !important;
+}
+
+.js-add-contrast a {
+  background-color: #222 !important;
+  color: #35fdc9 !important;
+  text-decoration: underline;
+}
+
 .js-add-underline a {
   text-decoration: underline !important;
 }
@@ -10,6 +28,9 @@
   line-height: 1.75 !important;
 }
 
-.js-add-Dyslexie {
-  font-family: 'Dyslexie' !important;
+.js-add-dyslexie,
+.js-add-dyslexie h1,
+.js-add-dyslexie h2,
+.js-add-dyslexie h3 {
+  font-family: 'Dyslexie', serif !important;
 }
