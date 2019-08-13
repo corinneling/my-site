@@ -18,6 +18,7 @@
 
   &__link {
     display: inline-block;
+    position: relative;
     color: $c-gray-2;
     text-decoration: none;
     padding: 0.25rem;
@@ -29,24 +30,23 @@
     &::before {
       content: "";
       display: block;
-      position: relative;
+      position: absolute;
       z-index: -1;
-      top: 1.75rem;
+      bottom: 0rem;
       left: 0;
       width: 100%;
-      height: 0.125rem;
-      border-radius: 0.125rem;
-      background-color: $c-gray-2;
-      background-size: 130% 130%;
-      background-position: 0% 50%;
-      transform: scale(1);
+      height: 0.25rem;
+      background-size: 200% 200%;
+      background-position: 50% 50%;
+      transform: scale(1, 1);
+      background-image: linear-gradient(to left, $c-green 0%, #81baff, $c-pink 100%);
       transform-origin: 10% 100%;
-      transition: transform 200ms cubic-bezier(0.71, 0.55, 0.62, 1.37);
+      transition: all 200ms cubic-bezier(0.71, 0.55, 0.62, 1.37) 0ms;
     }
 
     &:hover::before {
-      border-radius: 0;
-      transform: scale(1, 4);
+      left: -0.15rem;
+      transform: scale(1.1, 8);
     }
   }
 }

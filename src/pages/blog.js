@@ -14,18 +14,16 @@ const Blog = ({ data }) => {
       <Layout>
         <div class="l--blog">
           <h1>Blog</h1>
-          <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
+          {/* <h2>{data.allMarkdownRemark.totalCount} Posts</h2> */}
             {data.allMarkdownRemark.edges.map(({ node }) => (
-              <div key={node.id}>
-                <Link to={node.fields.slug}>
-                  <h3>
+              <div key={node.id} className="cmp-blog">
+                <Link to={node.fields.slug} className="cmp-blog__link">
+                  <h3 className="cmp-blog__title">
                     {node.frontmatter.title}{" "}
-                    <span>
-                      — {node.frontmatter.date}
-                    </span>
                   </h3>
-                  <p>{node.excerpt}</p>
                 </Link>
+                <p className="cmp-blog__date">{node.frontmatter.date}</p>
+                <p>{node.excerpt}</p>
               </div>
             ))}
         </div>
