@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react';
-import initControlPanel from './helpers/index';
+import initControlPanel from './helpers';
 
 class ControlPanel extends Component {
   constructor(props) {
@@ -10,14 +10,13 @@ class ControlPanel extends Component {
     this.toggleExpandedAria = this.toggleExpandedAria.bind(this);
   }
 
-
-
   setIntialAria = () => {
-    this.panelButtonRef.setAttribute('aria-expanded', 'false');
+    console.log(this.panelButtonRef);
+    this.panelButtonRef.current.setAttribute('aria-expanded', 'false');
   }
 
   openControlPanelHandler = () => {
-    this.panelButtonRef.addEventListener('click', this.toggleExpandedAria);
+    this.panelButtonRef.current.addEventListener('click', this.toggleExpandedAria);
   }
 
   toggleExpandedAria = (e) => {
@@ -34,18 +33,41 @@ class ControlPanel extends Component {
     return (
       <div id="a11y-control-panel-wrapper">
         <button 
-          className="aesthetica11y-main-icon" 
+          className="panel__main-button" 
           ref={this.panelButtonRef} 
           onClick={this.openControlPanelHandler} 
           aria-expanded="true" 
-          aria-label="Open" 
-          data-tooltip="Panel to Control Page Styling" 
+          aria-label="Panel to Control Page Styling" 
           data-placement="top">
         </button>
-        <div className="aesthetica11y-container" aria-hidden="false">
-          <ul className="aesthetica11y-list">
-            <li className="aesthetica11y-list__item">
-              <button className="aesthetica11y__button icon-color" aria-label="Change coloring of this control panel" data-tooltip="Change coloring of this control panel" data-placement="left"></button>
+        <div className="panel__container" aria-hidden="false">
+          <ul class="panel__list">
+            <li class="panel__list-item">
+              <button class="panel__button icon-color" aria-label="Change coloring of this control panel" data-placement="left"></button>
+            </li>
+            <li class="panel__list-item">
+              <button class="panel__button icon-contrast" aria-label="Switch page contrast to dark or light" data-placement="left"></button>
+            </li>
+            <li class="panel__list-item">
+              <button class="panel__button icon-decrease" aria-label="Decrease body font size" data-placement="left"></button>
+            </li>
+            <li class="panel__list-item">
+              <button class="panel__button icon-increase" aria-label="Increase body font size" data-placement="left"></button>
+            </li>
+            <li class="panel__list-item">
+              <button class="panel__button icon-underline" aria-label="Add underline to links" data-placement="left"></button>
+            </li>
+            <li class="panel__list-item">
+              <button class="panel__button icon-letter-spacing" aria-label="Increase spacing between text letters" data-placement="left"></button>
+            </li>
+            <li class="panel__list-item">
+              <button class="panel__button icon-line-height" aria-label="Increase spacing between text lines" data-placement="left"></button>
+            </li>
+            <li class="panel__list-item">
+              <button class="panel__button icon-font" aria-label="Change page text to OpenDyslexic font" data-placement="left"></button>
+            </li>
+            <li class="panel__list-item">
+              <button class="panel__button icon-refresh" aria-label="Refresh page styling" data-placement="left"></button>
             </li>
           </ul>
         </div>

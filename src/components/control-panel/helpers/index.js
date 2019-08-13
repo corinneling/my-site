@@ -1,13 +1,13 @@
 const aesthetica11y = {
   controlPanelEvents: function() {
-    const links = document.querySelectorAll('.aesthetica11y__button');
+    const links = document.querySelectorAll('.panel__button');
     for (var i = 0; i < links.length; i++) {
       const properties = [this.prop1, this.prop2, this.prop3, this.prop4, this.prop5, this.prop6, this.prop7];
       links[i].addEventListener('click', properties[i]);
     }
   },
   prop1: function() {
-    const icons = document.querySelectorAll('.aesthetica11y__button');
+    const icons = document.querySelectorAll('.panel__button');
     for (var i = 0; i < icons.length; i++) {
       icons[i].style.backgroundColor === "" ? icons[i].style.backgroundColor = "#2B2B2B" : icons[i].style.backgroundColor = "";
     }
@@ -45,9 +45,7 @@ function toggleClass(customClass) {
 }
 
 function initControlPanel() {
-  // setIntialAria(panelButton, 'aria-expanded', 'false');
-  // openControlPanel();
   aesthetica11y.controlPanelEvents();
 }
 
-export default initControlPanel
+export default initControlPanel;
