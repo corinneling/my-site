@@ -63,6 +63,7 @@
 
   h2 {
     font-size: 1.5rem;
+    border-bottom: 1px solid #eee;
 
     @media (min-width: $bp-sm) {
       font-size: 2.125rem;
@@ -88,10 +89,25 @@
 
   code {
     background-color: #eee;
-    color: #333;
+    color: #222;
     padding: 0.25rem 0.75rem;
     border-radius: 0.25rem;
     font-weight: bold;
+    font-family: "IBM Plex Mono",monospace;
+  }
+
+  pre code {
+    display: block;
+    width: 100%;
+    background-color: #2E3440;
+    color: #fff;
+    line-height: 1.75;
+    font-size: 0.75rem;
+    padding: 1rem 2rem;
+    margin: 2rem auto;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    font-family: "IBM Plex Mono",monospace;
   }
 
   a {
