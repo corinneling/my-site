@@ -14,15 +14,15 @@ const Blog = ({ data }) => {
       <Layout>
         <div class="l--blog">
           <h1>Blog</h1>
-          {/* <h2>{data.allMarkdownRemark.totalCount} Posts</h2> */}
             {data.allMarkdownRemark.edges.map(({ node }) => (
               <div key={node.id} className="cmp-blog">
                 <Link to={node.fields.slug} className="cmp-blog__link">
-                  <h3 className="cmp-blog__title">
+                  <h2 className="cmp-blog__title">
                     {node.frontmatter.title}{" "}
-                  </h3>
+                  </h2>
                 </Link>
-                <p className="cmp-blog__date">{node.frontmatter.date}</p>
+                <h3 className="cmp-blog__date">{node.frontmatter.date}</h3>
+                <h3 className="cmp-blog__time">{node.timeToRead} min. read</h3>
                 <p>{node.excerpt}</p>
               </div>
             ))}
@@ -36,21 +36,24 @@ export default Blog;
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
       totalCount
       edges {
         node {
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date
           }
           fields {
             slug
           }
-          excerpt
+          excerpt(pruneLength: 225)
+          timeToRead
         }
       }
     }
   }
+
+  
 `
