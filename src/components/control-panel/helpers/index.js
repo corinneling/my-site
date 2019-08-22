@@ -34,7 +34,6 @@ const aesthetica11y = {
 
 function toggleClass(customClass) {
   const body = document.querySelector('body');
-  body.removeAttribute("class")
   if (!body.classList.contains(customClass)) {
     body.classList.add(customClass)
   } else {
