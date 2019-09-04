@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+ const path = require('path');
+
 module.exports = {
   siteMetadata: {
     siteTitle: 'hello there'
@@ -17,7 +19,35 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+      plugins: [{
+        resolve: `gatsby-remark-vscode`,
+        // All options are optional. Defaults shown here.
+        options: {
+          colorTheme: 'Night Owl Light',
+          wrapperClassName: '',   // Additional class put on 'pre' tag
+          injectStyles: false,     // Injects (minimal) additional CSS for layout and scrolling
+          extensions: [{
+            identifier: 'sdras.night-owl',
+            version: '1.1.3'
+          }],
+          languageAliases: {},    // Map of custom/unknown language codes to standard/known language codes
+          replaceColor: x => x,   // Function allowing replacement of a theme color with another. Useful for replacing hex colors with CSS variables.
+          getLineClassName: ({    // Function allowing dynamic setting of additional class names on individual lines
+            content,              //   - the string content of the line
+            index,                //   - the zero-based index of the line within the code fence
+            language,             //   - the language specified for the code fence
+            codeFenceOptions      //   - any options set on the code fence alongside the language (more on this later)
+          }) => '',
+          extensionDataDirectory: // Absolute path to the directory where extensions will be downloaded. Defaults to inside node_modules.
+            path.resolve('extensions'),
+          logLevel: 'error'       // Set to 'warn' to debug if something looks wrong
+        }
+      }]
+    }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -16,7 +16,7 @@ Then I added an [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label) t
 
 ```html
 <button class="button button--icon" aria-label="Update Account Settings">
-	<svg>...</svg>
+  <svg>...</svg>
 </button>
 ```
 
@@ -35,28 +35,28 @@ Then I added a couple of default styles to this pseudo element including display
 
 The display value of the element is set to `none` so the user won't be able to see the tooltip initially. Then it has a position of `absolute` since our button will have a position of `relative`, and then it has left and bottom properties so the tooltip will appear in the correct spot. All of this adds to the final default styles for the pseudo element.
 
-``` scss
+```scss
   &::after {
     content: attr(aria-label);
-		display: none;
+    display: none;
     position: absolute;
-		bottom: 0.3rem;
+    bottom: 0.3rem;
     left: 125%;
-		color: #fff;
-		background: #444;
+    color: #fff;
+    background: #444;
     font-size: 0.875rem;
     line-height: 1.5;
     padding: 0.25rem 0.75rem;
     white-space: nowrap;
     border-radius: 0.125rem;
-		box-shadow: 2px 6px 8px -2px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 6px 8px -2px rgba(0, 0, 0, 0.25);
   }
 ```
 
 ## Showing the Pseudo Element Content
 Then comes the final step, making sure the user will be able to see the tooltip content when they hover or focus on the icon. To do that, the hover and focus selector is set to `display: block`, resulting in the following code.
 
-```
+```scss
   &:hover::after,
   &:focus::after {
     display: block;
@@ -64,7 +64,7 @@ Then comes the final step, making sure the user will be able to see the tooltip 
 ```
 
 ## Final Result
-<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Tooltip" src="//codepen.io/corinneling/embed/aboNVvz/?height=265&theme-id=dark&default-tab=css,result&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="365" style="width: 100%;" scrolling="no" title="Accessible Tooltip" src="//codepen.io/corinneling/embed/aboNVvz/?height=265&theme-id=dark&default-tab=css,result&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/corinneling/pen/aboNVvz/'>Accessible Tooltip</a> by Corinne Ling
   (<a href='https://codepen.io/corinneling'>@corinneling</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>

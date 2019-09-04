@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:400|Lato&display=swap');
 
+@font-face {
+  font-family: "Victor Mono";
+  font-style: normal;
+  src: url(../assets/font/VictorMono-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Victor Mono";
+  font-style: italic;
+  src: url(../assets/font/VictorMono-BoldItalic.otf) format("opentype");
+}
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
