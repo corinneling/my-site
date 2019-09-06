@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Helmet } from "react-helmet"
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import setRandomColors from '../components/random-color';
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
+  setRandomColors();
+
   return (
-    <Layout>
-      <div className="l--blog-post">
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
-    </Layout>
+    <Fragment>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{post.frontmatter.title}</title>
+        <meta name="description" content={post.excerpt} />
+      </Helmet>
+      <Layout>
+        <div className="l--blog-post">
+          <span className="first-stripe"></span>
+          <span className="second-stripe"></span>
+          <h1>{post.frontmatter.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div>
+      </Layout>
+    </Fragment>
   )
 }
 
@@ -23,6 +36,7 @@ export const query = graphql`
       frontmatter {
         title
       }
+      excerpt(pruneLength: 150)
     }
   }
 `

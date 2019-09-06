@@ -12,7 +12,7 @@ const Blog = ({ data }) => {
         <meta name="description" content="A place to put my thoughts as I go through tutorials and learn new things." />
       </Helmet>
       <Layout>
-        <div class="l--blog">
+        <div className="l--blog">
           <h1>Blog</h1>
             {data.allMarkdownRemark.edges.map(({ node }) => (
               <Link to={node.fields.slug} className="cmp-blog-container">
