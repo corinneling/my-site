@@ -8,12 +8,13 @@ const Blog = ({ data }) => {
     <Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Blog | Web Developer | Corinne Ling</title>
+        <title>Notes | Web Developer | Corinne Ling</title>
         <meta name="description" content="A place to put my thoughts as I go through tutorials and learn new things." />
       </Helmet>
-      <Layout>
+      <Layout page={'blog'}>
         <div className="l--blog">
-          <h1>Blog</h1>
+          <h1>Notes</h1>
+          <div className="l--wrap">
             {data.allMarkdownRemark.edges.map(({ node }) => (
               <Link to={node.fields.slug} className="cmp-blog-container">
                 <div key={node.id} className="cmp-blog">
@@ -26,6 +27,7 @@ const Blog = ({ data }) => {
                 </div>
               </Link>
             ))}
+          </div>
         </div>
       </Layout>
     </Fragment>
@@ -48,7 +50,7 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt(pruneLength: 225)
+          excerpt(pruneLength: 150)
           timeToRead
         }
       }
