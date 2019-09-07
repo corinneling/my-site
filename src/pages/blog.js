@@ -11,23 +11,23 @@ const Blog = ({ data }) => {
         <title>Notes | Web Developer | Corinne Ling</title>
         <meta name="description" content="A place to put my thoughts as I go through tutorials and learn new things." />
       </Helmet>
-      <Layout page={'blog'}>
-        <div className="l--blog">
+      <Layout page={'l--blog'}>
+        <div className="blog-title">
           <h1>Notes</h1>
-          <div className="l--wrap">
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-              <Link to={node.fields.slug} className="cmp-blog-container">
-                <div key={node.id} className="cmp-blog">
-                  <h2 className="cmp-blog__title">
-                    {node.frontmatter.title}{" "}
-                  </h2>
-                  <h3 className="cmp-blog__date">{node.frontmatter.date}</h3>
-                  <h3 className="cmp-blog__time">{node.timeToRead} min. read</h3>
-                  <p>{node.excerpt}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
+        </div>
+        <div className="l--wrap">
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <Link to={node.fields.slug} className="cmp-blog-container">
+              <div key={node.id} className="cmp-blog">
+                <h2 className="cmp-blog__title">
+                  {node.frontmatter.title}{" "}
+                </h2>
+                <h3 className="cmp-blog__date">{node.frontmatter.date}</h3>
+                <h3 className="cmp-blog__time">{node.timeToRead} min. read</h3>
+                <p>{node.excerpt}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </Layout>
     </Fragment>
@@ -50,7 +50,7 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt(pruneLength: 150)
+          excerpt(pruneLength: 100)
           timeToRead
         }
       }
