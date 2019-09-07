@@ -15,8 +15,10 @@ function setRandomColors(){
   const secondColor = newPalette[Math.floor(Math.random()*newPalette.length)];
   
 
-  document.documentElement.style.setProperty('--post-primary-color', firstColor)
-  document.documentElement.style.setProperty('--post-secondary-color', secondColor)
+  if (typeof window !== 'undefined') {
+    document.documentElement.style.setProperty('--post-primary-color', firstColor)
+    document.documentElement.style.setProperty('--post-secondary-color', secondColor)
+  }
 }
 
 export default setRandomColors;
