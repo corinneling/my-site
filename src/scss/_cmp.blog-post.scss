@@ -110,6 +110,23 @@
   pre {
     background-color: #f4f4f4;
     margin: 2rem auto;
+    position: relative;
+
+    &::before {
+      content: attr(data-language);
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 100;
+      background-color: #fff;
+      border: 2px solid #f4f4f4;
+      color: #494949;
+      padding: 0.25rem 0.5rem;
+      box-sizing: border-box;
+      border-radius: 0 0 0.5rem 0;
+      font-size: 0.875rem;
+    }
   }
 
   a {
