@@ -29,29 +29,29 @@
 }
 
 .l--blog {
-  background-color: #1c133f;
-  color: #fff;
+  background-color: #fff;
+  color: #1c133f;
   background: repeating-linear-gradient(
     90deg,
-    #1c133f,
-    #1c133f 40px,
-    #291c5e 40px,
-    #291c5e 42px
+    #fff,
+    #fff 40px,
+    #eff1ff 40px,
+    #eff1ff 42px
   );
 
   @media (min-width: 28rem) {
     background: repeating-linear-gradient(
       90deg,
-      #1c133f,
-      #1c133f 110px,
-      #291c5e 110px,
-      #291c5e 112px
+      #fff,
+      #fff 100px,
+      #eff1ff 100px,
+      #eff1ff 102px
     );
   }
-  
+
   .blog-title {
     margin: 1rem;
-    color: #a2a9d0;
+    color: #1c133f;
     max-width: 64rem;
     
     @media (min-width: 28rem) {
@@ -63,18 +63,6 @@
       font-size: 3rem;
       text-transform: lowercase;
       position: relative;
-    }
-  }
-
-  .cmp-nav__link {
-    text-transform: lowercase;
-    color: #a2a9d0;
-    box-shadow: inset 0 -0.1rem 0 #a2a9d0;
-    transition: box-shadow 150ms linear;
-
-    &:hover {
-      color: #1c133f;
-      box-shadow: inset 0 -1.875rem 0 #a2a9d0;
     }
   }
 }

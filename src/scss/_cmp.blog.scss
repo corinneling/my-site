@@ -19,14 +19,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2rem;
-  background-color: #1c133f;
-  box-shadow: 0 0 0 0.1875rem #1c133f, 0 0 0 0.375rem #917af2;
-  color: #a2a9d0;
+  background-color: #fff;
+  box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.375rem #917af2;
+  color: #525561;
   box-sizing: border-box;
   transition: all 200ms cubic-bezier(0.71, 0.55, 0.62, 1.37);
 
   .cmp-blog-container:hover & {
-    box-shadow: 0 0 0 0 #1c133f, 0 0 0 0.375rem #917af2;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0.375rem #917af2;
+    transform: translateY(-1rem);
   }
 
   &__title {
@@ -61,7 +62,7 @@
     font-size: 0.875rem;
     margin-top: 1.25rem;
     font-weight: 400;
-    color: #eee;
+    color: #525561;
     font-family: sans-serif;
   }
 

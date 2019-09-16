@@ -3,7 +3,7 @@ title: "How to Build an Accessible Tooltip"
 date: "2019-08-17"
 ---
 
-Sometimes a website is exploding with information. One solution to making sure that users aren’t overwhelmed by all of the content on the site is to use tooltips. This allows us to hide information until the user hovers or focuses on a certain element, such as a text element in a long paragraph or an icon.
+Sometimes a website has a ton of content, and we--as developers and designers--want to be able to hide some of that content in tooltips. This allows us to hide information until the user hovers or focuses on a certain element, such as a text element in a long paragraph or an icon.
 
 These tooltips can end up being inaccessible to keyboard and screen reader users though. So, I am going to show you how to easily create accessible tooltips.
 
