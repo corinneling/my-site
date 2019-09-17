@@ -17,16 +17,16 @@ const Blog = ({ data }) => {
         </div>
         <div className="l--wrap">
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <Link to={node.fields.slug} className="cmp-blog-container">
-              <div key={node.id} className="cmp-blog">
-                <h2 className="cmp-blog__title">
+            <div key={node.id} className="cmp-blog">
+              <h2 className="cmp-blog__title">
+                <Link className="cmp-blog__link" to={node.fields.slug}>
                   {node.frontmatter.title}{" "}
-                </h2>
-                <h3 className="cmp-blog__date">{node.frontmatter.date}</h3>
-                <h3 className="cmp-blog__time">{node.timeToRead} min. read</h3>
-                <p>{node.excerpt}</p>
-              </div>
-            </Link>
+                </Link>
+              </h2>
+              <p>{node.excerpt}</p>
+              <p className="cmp-blog__date">{node.frontmatter.date}</p>
+              <p className="cmp-blog__time">{node.timeToRead} min. read</p>
+            </div>
           ))}
         </div>
       </Layout>
