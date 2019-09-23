@@ -13,7 +13,7 @@ const Header = () => {
             <Link to="/projects/" className="cmp-nav__link">Projects</Link>
           </li>
           <li className="cmp-nav__item">
-            <Link to="/blog/" className="cmp-nav__link">Notes</Link>
+            <Link to="/notes/" className="cmp-nav__link">Notes</Link>
           </li>
         </ul>
       </nav>
