@@ -61,3 +61,4 @@ public
 # Mac files
 .DS_Store
 extensions/
+.vscode/
