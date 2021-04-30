@@ -1,0 +1,18 @@
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title #{title}
+    meta(name="description", content=description)
+    link(href="./css/base.css", rel="stylesheet")
+    block head
+
+  body
+    main
+      block content
+    footer
+      block footer-content
