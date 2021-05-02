@@ -20,12 +20,13 @@
 
   &::before {
     content: attr(aria-label);
+    font-family: 'Victor Mono';
 		transform: translateX(-120%);
     position: absolute;
 		opacity: 0;
 		top: -1.5rem;
     left: 0.25rem;
-		color: #999;
+		color: white;
     font-size: 0.875rem;
     line-height: 1.5;
     padding: 0.25rem 0.75rem;
@@ -51,8 +52,8 @@
 				transform-origin: 0% 50%;
 	}
 	
-	 &:hover::after,
-	 &:hover::before,
+	&:hover::after,
+	&:hover::before,
   &:focus::after,
 	&:focus::before {
 		opacity: 1;
@@ -65,4 +66,16 @@
 	width: 2.5rem;
 	pointer-events: none;
 	overflow: hidden;
+}
+
+.accordion {
+	&__content {		
+		&[aria-hidden='false'] {
+			display: block;
+		}
+		
+		&[aria-hidden='true'] {
+			display: none;
+		}
+	}
 }

@@ -6,58 +6,57 @@ block variables
 
 block content
   .site-container
-  .background
-  .content
-    header
-      .heart-container
-        .heart.heart--one
-        .heart.heart--two
-        .heart.heart--three
-        .heart.heart--four
-        .heart.heart--five
-      .welcome-container
-        h1 Hi, I'm Corinne!
-      .rupees-container
-        .rupee
-        p add something here
-    main
-      section.profile
-        .intro
-          h2 Web Developer
-          p 5 years experience
-          ul
-            li something
-            li something
-            li something
-        .description
-          p I have a passion for collaborating with others to create quality websites and tools, through Progressive Enhancement, accessibility, and meaningful user interfaces.
-      section.inventory
-        .accordion
-          .accordion__button-container
-            button.accordion__button(aria-expanded="true" aria-controls="ac-skills" aria-label="Skills") 
-              img.ac__img(src="#")
-            button.accordion__button(aria-expanded="false" aria-controls="ac-projects" aria-label="Projects")
-              img.ac__img(src="#")
-            button.accordion__button(aria-expanded="false" aria-controls="ac-strengths" aria-label="Strengths") 
-              img.ac__img(src="#")
-            button.accordion__button(aria-expanded="false" aria-controls="ac-values" aria-label="Values")
-              img.ac__img(src="#")
-            button.accordion__button(aria-expanded="false" aria-controls="ac-hobbies" aria-label="Hobbies")
-              img.ac__img(src="#")
-          
-          div.accordion__content(id="ac-skills" aria-hidden="false")
-            p content 1
-          div.accordion__content(id="ac-projects" aria-hidden="true")
-            p content 2
-          div.accordion__content(id="ac-strengths" aria-hidden="true")
-            p content 3
-          div.accordion__content(id="ac-values" aria-hidden="true")
-            p content 4
-          div.accordion__content(id="ac-hobbies" aria-hidden="true")
-            p content 5
-    footer
-    	.social-container
-			  a.social-link(href="#") Github
-			  a.social-link(href="#") Codepen
+    .background
+    .content
+      header
+        .heart-container
+          .heart.heart--one
+          .heart.heart--two
+          .heart.heart--three
+          .heart.heart--four
+          .heart.heart--five
+        .welcome-container
+          h1 Hi, I'm Corinne!
+        .rupees-container
+          .rupee
+          p add something here
+      main
+        section.profile
+          .intro
+            h2 Web Developer
+            p 5 years experience
+            ul
+              li something
+              li something
+              li something
+          .description
+            p I have a passion for collaborating with others to create quality websites and tools, through Progressive Enhancement, accessibility, and meaningful user interfaces.
+        section.inventory
+          .accordion
+            .accordion__button-container
+              button.accordion__button(aria-expanded="true" aria-controls="ac-skills" aria-label="Skills") 
+                img.ac__img(src="../assets/img/broadsword.svg")
+              button.accordion__button(aria-expanded="false" aria-controls="ac-projects" aria-label="Projects")
+                img.ac__img(src="../assets/img/potion-ball.svg")
+              button.accordion__button(aria-expanded="false" aria-controls="ac-strengths" aria-label="Strengths") 
+                img.ac__img(src="../assets/img/viking-shield.svg")
+              button.accordion__button(aria-expanded="false" aria-controls="ac-values" aria-label="Values")
+                img.ac__img(src="../assets/img/heart-wings.svg")
+              button.accordion__button(aria-expanded="false" aria-controls="ac-hobbies" aria-label="Hobbies")
+                img.ac__img(src="../assets/img/perspective-dice.svg")
+            
+            div.accordion__content(id="ac-skills" aria-hidden="false")
+              p content 1
+            div.accordion__content(id="ac-projects" aria-hidden="true")
+              p content 2
+            div.accordion__content(id="ac-strengths" aria-hidden="true")
+              p content 3
+            div.accordion__content(id="ac-values" aria-hidden="true")
+              p content 4
+            div.accordion__content(id="ac-hobbies" aria-hidden="true")
+              p content 5
 
 block footer-content
+  .social-container
+    a.social-link(href="#") Github
+    a.social-link(href="#") Codepen

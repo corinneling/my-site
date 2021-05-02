@@ -11,7 +11,7 @@
 	height:100%;
 	width: 100%;
   filter: blur(2px);
-  background: linear-gradient(to right, #000000bf, #000000bf), url('../assets/img/dark-forest.jpeg') no-repeat top center;
+  background: linear-gradient(to right, rgba(36 ,42 ,37, 0.9), rgba(36 ,42 ,37, 0.9)), url('../assets/img/dark-forest.jpeg') no-repeat top center;
 	background-size: cover;
 }
 
@@ -28,7 +28,7 @@ main {
 	align-items: stretch;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: repeat(5, minmax(0, 1fr));
-	color: #999;
+	color: white;
 
   .profile {
     order: 1;
