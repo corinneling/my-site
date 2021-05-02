@@ -42,7 +42,7 @@ block content
                 img.ac__img(src="../assets/img/viking-shield.svg")
               button.accordion__button(aria-expanded="false" aria-controls="ac-values" aria-label="Values")
                 img.ac__img(src="../assets/img/heart-wings.svg")
-              button.accordion__button(aria-expanded="false" aria-controls="ac-hobbies" aria-label="Hobbies")
+              button.accordion__button(aria-expanded="false" aria-controls="ac-love" aria-label="Love")
                 img.ac__img(src="../assets/img/perspective-dice.svg")
             
             div.accordion__content(id="ac-skills" aria-hidden="false")
@@ -57,13 +57,32 @@ block content
                 li.skills-list__item Sass
                 li.skills-list__item CSS in JS
             div.accordion__content(id="ac-projects" aria-hidden="true")
-              p content 2
+              ul
+                li
+                  a(href="https://github.com/corinneling/whirligiggle") Whirligiggle
+                  span An accessible, performant, mobile friendly carousel 
+                li 
+                  a(href="https://docs.google.com/presentation/d/1s-Fl5Uv_IEp-aYiecrXmXLFHgxtmFO4lxGhWMnWLle8/edit?usp=sharing") Accessibility Advocacy Presentation
+                  span Presentation given at Sparkbox's Unconf Virtual Conference about how to integrate accessibilty into the development processa and continually advocate for it
+                li 
+                  a(href="https://github.com/corinneling/frontend-test-env") Frontend Test Environment
+                  span A test environment using Jest and DOM testing library to test ES6 based frontend components
+                li
+                  a(href="https://sparkbox.com/foundry/semantic_tags_aria_attributes_descriptive_links_for_website_accessibility") Build Accessible Components with Progressive Enhancement
+                  span Video series on how to build accessible components that are dependent on JS by taking a progressive enhancemnt developement approach
             div.accordion__content(id="ac-strengths" aria-hidden="true")
               p content 3
             div.accordion__content(id="ac-values" aria-hidden="true")
               p content 4
-            div.accordion__content(id="ac-hobbies" aria-hidden="true")
-              p content 5
+            div.accordion__content(id="ac-love" aria-hidden="true")
+              ul.skills-list
+                li.skills-list__item Painting
+                li.skills-list__item Reading (Comic Books, Fantasy, Non-fiction)
+                li.skills-list__item Hiking
+                li.skills-list__item My two cats
+                li.skills-list__item Video Games
+                li.skills-list__item Plants
+
     footer
       .social-container
         a.social-link(href="#") Github
