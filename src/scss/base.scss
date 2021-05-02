@@ -4,7 +4,11 @@
 // Elements
 @import 'elements.text';
 
+// Layout
 @import 'layout';
 
+// Components
 @import 'cmp.header';
+@import 'cmp.profile';
+@import 'cmp.accordion';
 @import 'cmp.footer';

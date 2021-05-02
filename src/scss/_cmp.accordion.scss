@@ -1,0 +1,68 @@
+
+.accordion__button-container {
+	display: flex;
+	justify-content: space-evenly;
+	border-bottom: 1px solid #999;
+	max-width: 50rem;
+	margin: auto;
+	justify-self: center;
+	padding: 1rem 0;
+	margin: 2rem 3rem;
+}
+
+.accordion__button {
+	color: white;
+	background-color: transparent;
+	padding: 0.5rem;
+	border: none;
+	border-bottom: 1px solid transparent;
+	position: relative; 
+
+  &::before {
+    content: attr(aria-label);
+		transform: translateX(-120%);
+    position: absolute;
+		opacity: 0;
+		top: -1.5rem;
+    left: 0.25rem;
+		color: #999;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0.25rem 0.75rem;
+    white-space: nowrap;
+		font-weight: bold;
+    border-radius: 0.125rem;
+		transition: all 500ms cubic-bezier(.16,-0.7,.34,.97);
+		transform-origin: 0% 50%;
+
+  }
+	
+	&::after {
+		content: '';
+		position: absolute; 
+		transform: scale(0, 1);
+		bottom: -1.5rem;
+		left: 1rem;
+		height: 1rem;
+		width: 1rem;
+		background: #999;
+		border-radius: 50%;
+		transition: all 150ms ease-in-out;
+				transform-origin: 0% 50%;
+	}
+	
+	 &:hover::after,
+	 &:hover::before,
+  &:focus::after,
+	&:focus::before {
+		opacity: 1;
+		transform: scale(1, 1) translateX(0);
+	}
+}
+
+.ac__img {
+	height: 2.5rem;
+	width: 2.5rem;
+	pointer-events: none;
+	overflow: hidden;
+}

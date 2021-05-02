@@ -18,10 +18,27 @@
 .content {
 	height: 100%;
 	width: 100%;
-	  position: absolute;
+	position: absolute;
 	top: 0;
 	z-index: 2;
 }
 
+main {
+	display: grid;
+	align-items: stretch;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	color: #999;
+
+  .profile {
+    order: 1;
+    grid-column: span 2;
+  }
+
+  .inventory {
+    order: 0;
+    grid-column: span 3;
+  }
+}
 
 

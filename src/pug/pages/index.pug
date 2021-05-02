@@ -21,6 +21,40 @@ block content
         .rupee
         p add something here
     main
+      section.profile
+        .intro
+          h2 Web Developer
+          p 5 years experience
+          ul
+            li something
+            li something
+            li something
+        .description
+          p I have a passion for collaborating with others to create quality websites and tools, through Progressive Enhancement, accessibility, and meaningful user interfaces.
+      section.inventory
+        .accordion
+          .accordion__button-container
+            button.accordion__button(aria-expanded="true" aria-controls="ac-skills" aria-label="Skills") 
+              img.ac__img(src="#")
+            button.accordion__button(aria-expanded="false" aria-controls="ac-projects" aria-label="Projects")
+              img.ac__img(src="#")
+            button.accordion__button(aria-expanded="false" aria-controls="ac-strengths" aria-label="Strengths") 
+              img.ac__img(src="#")
+            button.accordion__button(aria-expanded="false" aria-controls="ac-values" aria-label="Values")
+              img.ac__img(src="#")
+            button.accordion__button(aria-expanded="false" aria-controls="ac-hobbies" aria-label="Hobbies")
+              img.ac__img(src="#")
+          
+          div.accordion__content(id="ac-skills" aria-hidden="false")
+            p content 1
+          div.accordion__content(id="ac-projects" aria-hidden="true")
+            p content 2
+          div.accordion__content(id="ac-strengths" aria-hidden="true")
+            p content 3
+          div.accordion__content(id="ac-values" aria-hidden="true")
+            p content 4
+          div.accordion__content(id="ac-hobbies" aria-hidden="true")
+            p content 5
     footer
     	.social-container
 			  a.social-link(href="#") Github
