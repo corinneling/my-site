@@ -1,8 +1,6 @@
-import { setInitialAriaValue, accordionToggleHandler } from './accordion';
+import { handleTabClick, handleKeyDown } from './accordion';
 
-const buttons = document.querySelectorAll('.accordion__button');
-const contentSections = document.querySelectorAll('.accordion__content');
+const tabButtons = document.querySelectorAll('[role=tab]');
 
-setInitialAriaValue(buttons, 'aria-expanded', 'false');
-setInitialAriaValue(contentSections, 'aria-hidden', 'true');
-accordionToggleHandler(buttons);
+handleTabClick(tabButtons);
+handleKeyDown(tabButtons);

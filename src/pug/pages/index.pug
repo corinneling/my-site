@@ -37,20 +37,19 @@ block content
           .description
             p I have a passion for collaborating with others to create quality websites and tools, through Progressive Enhancement, accessibility, and meaningful user interfaces.
         section.inventory
-          .accordion
-            .accordion__button-container
-              button.accordion__button(aria-expanded="true" aria-controls="ac-skills" aria-label="Skills") 
+          .tabs
+            .tabs__nav(role="tablist")
+              button.tabs__button(role="tab" aria-selected="true" id="tab-1" aria-controls="tab-panel-1" tabindex="0" aria-label="Skills")
                 img.ac__img.ac__img--sword(src="../assets/img/sword.svg")
-              button.accordion__button(aria-expanded="false" aria-controls="ac-projects" aria-label="Projects")
+              button.tabs__button(role="tab" aria-selected="false" id="tab-2" aria-controls="tab-panel-2" tabindex="-1" aria-label="Projects")
                 img.ac__img(src="../assets/img/potion.svg")
-              button.accordion__button(aria-expanded="false" aria-controls="ac-strengths" aria-label="Strengths") 
+              button.tabs__button(role="tab" aria-selected="false" id="tab-3" aria-controls="tab-panel-3" tabindex="-1" aria-label="Strengths")
                 img.ac__img(src="../assets/img/shield.svg")
-              button.accordion__button(aria-expanded="false" aria-controls="ac-values" aria-label="Values")
+              button.tabs__button(role="tab" aria-selected="false" id="tab-4" aria-controls="tab-panel-4" tabindex="-1" aria-label="Values")
                 img.ac__img(src="../assets/img/star.svg")
-              button.accordion__button(aria-expanded="false" aria-controls="ac-love" aria-label="Love")
+              button.tabs__button(role="tab" aria-selected="false" id="tab-5" aria-controls="tab-panel-5" tabindex="-1" aria-label="Love")
                 img.ac__img(src="../assets/img/mushroom.svg")
-            
-            div.accordion__content(id="ac-skills" aria-hidden="false")
+            .tabs__container(role="tabpanel" aria-hidden="false" id="tab-panel-1" aria-labelledby="tab-1")
               ul.skills-list
                 li.skills-list__item ES6
                 li.skills-list__item React
@@ -61,7 +60,7 @@ block content
                 li.skills-list__item Accessibility
                 li.skills-list__item Sass
                 li.skills-list__item CSS in JS
-            div.accordion__content(id="ac-projects" aria-hidden="true")
+            .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-2" aria-labelledby="tab-2")
               ul
                 li
                   a(href="https://github.com/corinneling/whirligiggle") Whirligiggle
@@ -75,11 +74,9 @@ block content
                 li
                   a(href="https://sparkbox.com/foundry/semantic_tags_aria_attributes_descriptive_links_for_website_accessibility") Build Accessible Components with Progressive Enhancement
                   span Video series on how to build accessible components that are dependent on JS by taking a progressive enhancemnt developement approach
-            div.accordion__content(id="ac-strengths" aria-hidden="true")
-              p content 3
-            div.accordion__content(id="ac-values" aria-hidden="true")
-              p content 4
-            div.accordion__content(id="ac-love" aria-hidden="true")
+            .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-3" aria-labelledby="tab-3")
+            .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-4" aria-labelledby="tab-4")
+            .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-5" aria-labelledby="tab-5")
               ul.skills-list
                 li.skills-list__item Painting
                 li.skills-list__item Reading (Comic Books, Fantasy, Non-fiction)
@@ -87,6 +84,8 @@ block content
                 li.skills-list__item My two cats
                 li.skills-list__item Video Games
                 li.skills-list__item Plants
+
+
 
     footer
       .social-container

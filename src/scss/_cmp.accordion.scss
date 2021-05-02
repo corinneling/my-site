@@ -1,5 +1,5 @@
 
-.accordion__button-container {
+.tabs__nav {
 	display: flex;
 	justify-content: space-evenly;
 	border-bottom: 1px solid #999;
@@ -10,7 +10,7 @@
 	margin: 2rem 3rem;
 }
 
-.accordion__button {
+.tabs__button {
 	color: white;
 	background-color: transparent;
 	padding: 0.5rem;
@@ -72,15 +72,15 @@
 	}
 }
 
-.accordion {
-	&__content {		
-		&[aria-hidden='false'] {
-			display: block;
-		}
-		
-		&[aria-hidden='true'] {
-			display: none;
-		}
+.tabs__container {
+	min-height: 20rem;
+
+	&[aria-hidden='false'] {
+		display: block;
+	}
+	
+	&[aria-hidden='true'] {
+		display: none;
 	}
 }
 
@@ -98,7 +98,7 @@
 		font-size: 1.25rem;
 		height: 7rem;
 		width: 100%;
-		border: 4px solid black;
+		border: 1px solid #999;
 		box-shadow: inset 0 0 2px #999;
 		background: rgba(0, 0, 0, 0.25);
 		display: flex;

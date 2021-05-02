@@ -1,30 +1,57 @@
-export function setInitialAriaValue(elements, aria, ariaValue) {
-	elements.forEach((element) => {
-		element.setAttribute(`${aria}`, `${ariaValue}`);
+function resetPreviousActiveTab() {
+	const tabButtons = document.querySelectorAll('[role=tab]');
+	tabButtons.forEach((button) => {
+		const activeTab = button.getAttribute('aria-selected');
+		if (activeTab === 'true') {
+			button.setAttribute('aria-selected', 'false');
+			button.setAttribute('tabindex', -1);
+		}
+	})
+}
+
+function hidePreviousTabPanel() {
+	const tabPanels = document.querySelectorAll('[role=tabpanel]');
+	tabPanels.forEach((panel) => {
+		const activePanel = panel.getAttribute('aria-hidden');
+		if (activePanel === 'false') {
+			panel.setAttribute('aria-hidden', 'true');
+		}
+	})
+}
+
+function selectTab(tab) {
+	resetPreviousActiveTab();
+	tab.setAttribute('aria-selected', 'true');
+	tab.setAttribute('tabindex', 0);
+	hidePreviousTabPanel();
+	const tabPanelId = tab.getAttribute('aria-controls');
+	const tabPanel = document.getElementById(tabPanelId);
+	tabPanel.setAttribute('aria-hidden', 'false');
+}
+
+function setActiveTab(e) {
+	selectTab(e.target);
+}
+
+function setActiveTabKeyDown(e) {
+	const currentTabIndex = [...tabButtons].indexOf(e.target);
+	let nextTab = e.key === 'ArrowLeft' ? tabButtons[currentTabIndex - 1] : e.key === 'ArrowRight' ? tabButtons[currentTabIndex + 1] : null;
+	
+	if (nextTab) {
+		nextTab.focus();
+	}
+	
+	selectTab(nextTab);
+}
+
+export function handleTabClick(tabButtons) {
+	tabButtons.forEach((button) => {
+		button.addEventListener('click', setActiveTab);
 	});
 }
 
-export function accordionToggleHandler(buttons) {
-	buttons.forEach((button) => {
-		button.addEventListener('click', toggleContent);
+export function handleKeyDown(tabButtons) {
+	tabButtons.forEach((button) => {
+		button.addEventListener('keydown', setActiveTabKeyDown)
 	});
-}
-
-function toggleContent(e) {
-	toggleButton(e.target);
-	toggleDetails(e.target);
-}
-
-function toggleButton(button) {
-	const expandedValue = button.getAttribute('aria-expanded');
-	const setValue = expandedValue === 'true' ? 'false' : 'true';
-	button.setAttribute('aria-expanded', setValue);
-}
-
-function toggleDetails(button) {
-	const buttonAriaControl = button.getAttribute('aria-controls');
-	const content = document.getElementById(buttonAriaControl);
-  const hiddenValue = content.getAttribute('aria-hidden');
-	const setValue = hiddenValue === 'true' ? 'false' : 'true';
-	content.setAttribute('aria-hidden', setValue);
 }
