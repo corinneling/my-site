@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+}
+
+.site-container {
+	width: 100vw;
+	height: 100vh;
+}
+
+.background {
+	height:100%;
+	width: 100%;
+  filter: blur(2px);
+  background: linear-gradient(to right, #000000bf, #000000bf), url('/assets/img/dark-forest.jpeg') no-repeat top center;
+	background-size: cover;
+}
+
+.content {
+	height: 100%;
+	width: 100%;
+	  position: absolute;
+	top: 0;
+	z-index: 2;
+}
+
+
+
