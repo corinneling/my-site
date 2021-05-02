@@ -24,11 +24,13 @@
 }
 
 main {
-	display: grid;
 	align-items: stretch;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-columns: repeat(5, minmax(0, 1fr));
 	color: white;
+
+	@media (min-width: 569px) {
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+	}
 
   .profile {
     order: 1;

@@ -9,7 +9,7 @@ block content
     .background
     .content
       header
-        .heart-container
+        .heart-container(aria-label="5 life hearts, 4 filled")
           .heart.heart--one
           .heart.heart--two
           .heart.heart--three
@@ -55,8 +55,7 @@ block content
               p content 4
             div.accordion__content(id="ac-hobbies" aria-hidden="true")
               p content 5
-
-block footer-content
-  .social-container
-    a.social-link(href="#") Github
-    a.social-link(href="#") Codepen
+    footer
+      .social-container
+        a.social-link(href="#") Github
+        a.social-link(href="#") Codepen
