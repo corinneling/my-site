@@ -79,3 +79,26 @@
 		}
 	}
 }
+
+.skills-list {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-rows: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+	list-style: none;
+	max-width: 80%;
+	margin: auto;
+	padding-left: 0;
+
+	&__item {
+		height: 6rem;
+		width: 100%;
+		border: 5px solid rgba(0, 0, 0, 0.5);
+		box-shadow: inset 0 0 0 1px #999;
+		background: rgba(0, 0, 0, 0.5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+}
