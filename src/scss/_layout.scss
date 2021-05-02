@@ -7,10 +7,11 @@
 	height: 100vh;
 }
 
+
 .background {
 	height:100%;
 	width: 100%;
-  filter: blur(2px);
+  filter: blur(0px);
   background: linear-gradient(to right, rgba(36 ,42 ,37, 0.9), rgba(36 ,42 ,37, 0.9)), url('../assets/img/dark-forest.jpeg') no-repeat top center;
 	background: linear-gradient(120deg, rgba(108, 113, 255, 0.9), rgba(170, 94, 253, 0.9)),url(../assets/img/dark-forest.jpeg) no-repeat top center;
 	background-size: cover;

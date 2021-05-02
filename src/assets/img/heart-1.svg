@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg827"
+   width="960"
+   height="960"
+   viewBox="0 0 960 960">
+  <metadata
+     id="metadata833">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs831" />
+  <path
+     id="rect6084"
+     d="m 233.37066,180.82366 v 68.46355 h -68.4635 v 68.4635 H 96.443613 v 68.46355 68.46353 68.46355 h 68.463547 v 68.45507 h 68.4635 v 68.46358 h 68.46355 v 68.46355 h 68.46354 v 68.46354 h 68.46354 v 68.46355 h 68.45507 v -68.46355 h 68.46359 v -68.46354 h 68.46355 v -68.46355 h 68.46352 v -68.46358 h 68.4636 v -68.45507 h 68.46347 v -68.46355 -68.46353 -68.46355 h -68.46347 v -68.4635 h -68.4636 V 180.82366 H 644.1435 575.67995 v 68.46355 h -68.46359 v 68.4635 h -68.45507 v -68.4635 h -68.46354 v -68.46355 h -68.46354 z"
+     style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:41.53443527;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     id="rect5649"
+     d="m 301.83421,249.28721 v 68.4635 h -68.46355 v 68.46355 68.46353 h -68.4635 v 68.46355 h 68.4635 v 68.45507 h 68.46355 v 68.46358 h 68.46354 v 68.46355 h 68.46354 v 68.46354 h 68.45507 v -68.46354 h 68.46359 v -68.46355 h 68.46355 v -68.46358 h 68.46352 v -68.45507 h 68.4636 v -68.46355 -68.46353 -68.46355 h -68.4636 v -68.4635 H 644.1435 575.67995 v 68.4635 h -68.46359 v 68.46355 h -68.45507 v -68.46355 h -68.46354 v -68.4635 z"
+     style="opacity:1;fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:41.53443527;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     id="rect5677"
+     d="m 233.37066,249.28721 v 68.4635 h 68.46355 v -68.4635 z m 0,68.4635 h -68.4635 v 68.46355 68.46353 h 68.4635 v -68.46353 z"
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:41.53443527;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+</svg>
