@@ -34,6 +34,7 @@ function setActiveTab(e) {
 }
 
 function setActiveTabKeyDown(e) {
+	const tabButtons = document.querySelectorAll('[role=tab]');
 	const currentTabIndex = [...tabButtons].indexOf(e.target);
 	let nextTab = e.key === 'ArrowLeft' ? tabButtons[currentTabIndex - 1] : e.key === 'ArrowRight' ? tabButtons[currentTabIndex + 1] : null;
 	
