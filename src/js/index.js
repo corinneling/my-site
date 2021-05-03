@@ -1,4 +1,4 @@
-import { handleTabClick, handleKeyDown } from './accordion';
+import { handleTabClick, handleKeyDown } from './tab';
 
 const tabButtons = document.querySelectorAll('[role=tab]');
 

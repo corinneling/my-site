@@ -9,3 +9,38 @@ $c-gray-4: #444;
 
 // Breakpoints
 $bp-sm: 36rem;
+
+
+// Box Shadows
+$box-shadow--orange: 
+    4px 0 #ab6100,
+    -4px 0 #ab6100,
+    0 -4px #532f00,
+    0 4px #ab6100,
+    8px 0 #532f00,
+    -8px 0 #532f00,
+    0 -8px #532f00,
+    0 8px #532f00,
+    0 0 0 4px #532f00;
+
+$box-shadow--pink: 
+    4px 0 #ad1487,
+    -4px 0 #ad1487,
+    0 -4px #5c0a47,
+    0 4px #ad1487,
+    8px 0 #5c0a47,
+    -8px 0 #5c0a47,
+    0 -8px #5c0a47,
+    0 8px #5c0a47,
+    0 0 0 4px #5c0a47;
+
+$box-shadow--purple: 
+    4px 0 #7022ca,
+    -4px 0 #7022ca,
+    0 -4px #7022ca,
+    0 4px #7022ca,
+    8px 0 #541997,
+    -8px 0 #541997,
+    0 -8px #541997,
+    0 8px #541997,
+    0 0 0 4px #541997;

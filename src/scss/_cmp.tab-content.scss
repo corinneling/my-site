@@ -1,0 +1,108 @@
+.inventory-list {
+	display: grid;
+	gap: 3rem;
+	list-style: none;
+	max-width: 80%;
+	margin: auto;
+	padding-left: 0;
+
+	&__item {
+		font-size: 1.25rem;
+		padding: 0.5rem;
+		word-wrap: break-word;
+		width: 100%;
+		position: relative;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0.4rem;
+      left: 2.5%;
+      width: 95%;
+      margin: auto;
+      height: 0.6rem;
+    }
+	}
+}
+
+.inventory-list--skills {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-rows: repeat(3, minmax(0, 1fr));
+
+  & .inventory-list__item {
+    height: 6rem;
+    background: #ffa93b;
+    box-shadow: $box-shadow--orange;
+  }
+
+  & .inventory-list__item::before {
+    background-color: #ab6100;
+  }
+
+  & .inventory-list__item::after {
+    background-color: #ee9a2c;
+  }
+}
+
+.inventory-list--projects {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-rows: repeat(5, minmax(0, 1fr));
+
+  & .inventory-list__item {
+    font-size: 1rem;
+    padding: 1rem;
+		background: #41ac74;
+		flex-direction: column;
+		box-shadow: $box-shadow--pink;
+  }
+
+  & .inventory-list__item::before {
+    background-color: #369664;
+  }
+
+  & .inventory-list__item::after {
+    background-color: #40b377;
+  }
+
+  & a {
+    color: white;
+  }
+
+  & span {
+    font-size: 0.875rem;
+    margin-top: 1rem;
+  }
+}
+
+.inventory-list--interests {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-rows: repeat(3, minmax(0, 1fr));
+
+  & .inventory-list__item {
+    height: 6rem;
+    background: #8629f0;
+    box-shadow: $box-shadow--purple;
+  }
+
+  & .inventory-list__item::before {
+    background-color: #6a1fbe;
+  }
+
+  & .inventory-list__item::after {
+    background-color: #8128e7;
+  }
+}

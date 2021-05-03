@@ -35,7 +35,7 @@ block content
               li something
               li something
           .description
-            p I have a passion for collaborating with others to create quality websites and tools, through Progressive Enhancement, accessibility, and meaningful user interfaces.
+            p I have a passion for collaborating with others to create accessible websites and tools, through Progressive Enhancement and meaningful user interfaces.
         section.inventory
           .tabs
             .tabs__nav(role="tablist")
@@ -47,43 +47,40 @@ block content
                 img.ac__img(src="../assets/img/shield.svg")
               button.tabs__button(role="tab" aria-selected="false" id="tab-4" aria-controls="tab-panel-4" tabindex="-1" aria-label="Values")
                 img.ac__img(src="../assets/img/star.svg")
-              button.tabs__button(role="tab" aria-selected="false" id="tab-5" aria-controls="tab-panel-5" tabindex="-1" aria-label="Love")
+              button.tabs__button(role="tab" aria-selected="false" id="tab-5" aria-controls="tab-panel-5" tabindex="-1" aria-label="Interests")
                 img.ac__img(src="../assets/img/mushroom.svg")
+            .tabs__spacing
             .tabs__container(role="tabpanel" aria-hidden="false" id="tab-panel-1" aria-labelledby="tab-1")
-              ul.skills-list
-                li.skills-list__item ES6
-                li.skills-list__item React
-                li.skills-list__item TypeScript
-                li.skills-list__item Mocha & Chai
-                li.skills-list__item Jest
-                li.skills-list__item HTML
-                li.skills-list__item Accessibility
-                li.skills-list__item Sass
-                li.skills-list__item CSS in JS
+              ul.inventory-list.inventory-list--skills
+                li.inventory-list__item ES6
+                li.inventory-list__item React
+                li.inventory-list__item TypeScript
+                li.inventory-list__item Mocha & Chai
+                li.inventory-list__item Jest
+                li.inventory-list__item HTML
+                li.inventory-list__item Accessibility
+                li.inventory-list__item Sass
+                li.inventory-list__item CSS in JS
             .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-2" aria-labelledby="tab-2")
-              ul
-                li
-                  a(href="https://github.com/corinneling/whirligiggle") Whirligiggle
-                  span An accessible, performant, mobile friendly carousel 
-                li 
-                  a(href="https://docs.google.com/presentation/d/1s-Fl5Uv_IEp-aYiecrXmXLFHgxtmFO4lxGhWMnWLle8/edit?usp=sharing") Accessibility Advocacy Presentation
-                  span Presentation given at Sparkbox's Unconf Virtual Conference about how to integrate accessibilty into the development processa and continually advocate for it
-                li 
+              ul.inventory-list.inventory-list--projects
+                li.inventory-list__item
+                  a(href="https://github.com/corinneling/whirligiggle") Whirligiggle: Accessible Carousel
+                li.inventory-list__item
+                  a(href="https://docs.google.com/presentation/d/1s-Fl5Uv_IEp-aYiecrXmXLFHgxtmFO4lxGhWMnWLle8/edit?usp=sharing") Accessibility Advocacy Conference Presentation
+                li.inventory-list__item
                   a(href="https://github.com/corinneling/frontend-test-env") Frontend Test Environment
-                  span A test environment using Jest and DOM testing library to test ES6 based frontend components
-                li
-                  a(href="https://sparkbox.com/foundry/semantic_tags_aria_attributes_descriptive_links_for_website_accessibility") Build Accessible Components with Progressive Enhancement
-                  span Video series on how to build accessible components that are dependent on JS by taking a progressive enhancemnt developement approach
+                li.inventory-list__item
+                  a(href="https://sparkbox.com/foundry/semantic_tags_aria_attributes_descriptive_links_for_website_accessibility") Accessible Components with Progressive Enhancement
             .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-3" aria-labelledby="tab-3")
             .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-4" aria-labelledby="tab-4")
             .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-5" aria-labelledby="tab-5")
-              ul.skills-list
-                li.skills-list__item Painting
-                li.skills-list__item Reading (Comic Books, Fantasy, Non-fiction)
-                li.skills-list__item Hiking
-                li.skills-list__item My two cats
-                li.skills-list__item Video Games
-                li.skills-list__item Plants
+              ul.inventory-list.inventory-list--interests
+                li.inventory-list__item Painting
+                li.inventory-list__item Reading
+                li.inventory-list__item Hiking
+                li.inventory-list__item My two cats
+                li.inventory-list__item Video Games
+                li.inventory-list__item Plants
 
 
 

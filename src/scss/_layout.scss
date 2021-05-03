@@ -11,9 +11,9 @@
 .background {
 	height:100%;
 	width: 100%;
-  filter: blur(0px);
-  background: linear-gradient(to right, rgba(36 ,42 ,37, 0.9), rgba(36 ,42 ,37, 0.9)), url('../assets/img/dark-forest.jpeg') no-repeat top center;
-	background: linear-gradient(120deg, rgba(108, 113, 255, 0.9), rgba(170, 94, 253, 0.9)),url(../assets/img/dark-forest.jpeg) no-repeat top center;
+  filter: blur(1px);
+  background: linear-gradient(to right, rgba(36 ,42 ,37, 0.8), rgba(36 ,42 ,37, 0.8)), url(https://images.unsplash.com/photo-1566680609736-94fdf5a6cc3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80) no-repeat top center;
+	// background: linear-gradient(120deg, rgba(72, 93, 173, 0.75), rgba(119, 64, 177, 0.75)),url(https://images.unsplash.com/photo-1598042211665-f5211d265ed9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80) no-repeat top center;
 	background-size: cover;
 }
 
@@ -22,6 +22,7 @@
 	width: 100%;
 	position: absolute;
 	top: 0;
+	left: 0;
 	z-index: 2;
 }
 

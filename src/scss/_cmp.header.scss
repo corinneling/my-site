@@ -1,9 +1,20 @@
 header {
 	padding: 2rem;
-	border-bottom: 1px solid #999;
 	color: white;
 	display: grid;
 	grid-template-columns: repeat(1, minmax(0, 1fr));
+	position: relative;
+	margin-bottom: 3rem;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 10%;
+		width: 80%;
+		background-color: rgba(242, 242, 242, 0.25);
+		height: 0.125rem;
+	}
 
 	@media (min-width: 569px) {
 		grid-template-columns: repeat(5, minmax(0, 1fr));
