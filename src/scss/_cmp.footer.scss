@@ -1,9 +1,19 @@
 footer {
-	position: absolute;
+	position: relative;
 	width: 100%;
 	bottom: 0;
 	padding: 2rem;
-	border-top: 1px solid #999;
+  background: rgba(36 ,42 ,37, 0.7);
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: rgba(242, 242, 242, 0.25);
+		height: 0.125rem;
+	}  
 }
 
 .social-link {
@@ -24,6 +34,5 @@ footer {
     width: 1.5rem;
     border-radius: 50%;
     background: #999;
-    
   }
 }
