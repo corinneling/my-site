@@ -34,7 +34,7 @@
     position: absolute;
 		opacity: 0;
 		top: -1.5rem;
-    left: 0.25rem;
+    left: 0;
 		color: white;
     font-size: 0.875rem;
     line-height: 1.5;
@@ -67,6 +67,19 @@
 	&:focus::before {
 		opacity: 1;
 		transform: scale(1, 1) translateX(0);
+	}
+
+	&[aria-label="Skills"]::before {
+		left: -0.125rem
+	}
+
+	&[aria-label="Projects"]::before,
+	&[aria-label="Tooling"]::before {
+		left: -0.5rem
+	}
+
+	&[aria-label="Interests"]::before {
+		left: -0.875rem
 	}
 }
 
@@ -102,7 +115,7 @@
 }
 
 .tabs__spacing {
-	margin-top: 3.5rem;	
+	margin-top: 2.5rem;	
 }
 
 .tabs {
