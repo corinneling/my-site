@@ -9,22 +9,22 @@ block content
     .background
     .content
       header
-        .heart-container(aria-label="5 life hearts, 4 filled")
-          .heart.heart--one
-            img(src="../assets/img/heart-1.svg")
-          .heart.heart--two
-            img(src="../assets/img/heart-1.svg")
-          .heart.heart--three
-            img(src="../assets/img/heart-1.svg")
-          .heart.heart--four
-            img(src="../assets/img/heart-2.svg")
-          .heart.heart--five
-            img(src="../assets/img/heart-3.svg")
+        .heart-container
+          button.hearts(aria-describedby="health-hearts")
+            .heart.heart--one
+            .heart.heart--two
+            .heart.heart--three
+            .heart.heart--four
+            .heart.heart--five
+            .heart.heart--six
+            .heart.heart--seven
+          span(role="tooltip" id="health-hearts") full health, 7 of 7 hearts filled
         .welcome-container
           h1 Hi, I'm Corinne!
-        .rupees-container
-          .rupee
-          p calculate how many days ive been a developer
+        .days-container
+          button.days-button(aria-describedby="dev-days")
+            span.number-of-days _
+          span(role="tooltip" id="dev-days") days I've been a dev
       main
         section.profile
           .intro
