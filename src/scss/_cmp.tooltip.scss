@@ -1,0 +1,31 @@
+[role="tooltip"] {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  bottom: -1.5rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  background: rgba(242, 242, 242, 0.25);
+  color: white;
+  font-size: 0.875rem;
+
+  &::before {
+    content: '';
+    display: none;
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    width: 0; 
+    height: 0; 
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent; 
+    border-bottom: 0.5rem solid rgba(242, 242, 242, 0.25); 
+  }
+}
+
+button:hover + [role="tooltip"], 
+button:hover + [role="tooltip"]::before, 
+button:focus + [role="tooltip"],
+button:focus + [role="tooltip"]::before {  
+  display: block;
+}
