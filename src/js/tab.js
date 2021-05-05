@@ -15,6 +15,12 @@ function hidePreviousTabPanel() {
 		const activePanel = panel.getAttribute('aria-hidden');
 		if (activePanel === 'false') {
 			panel.setAttribute('aria-hidden', 'true');
+			const focusableItems = panel.querySelectorAll('a, button');
+			if (focusableItems) {
+				focusableItems.forEach((item) => {
+					item.setAttribute('tabindex', -1);
+				})
+			}
 		}
 	})
 }
@@ -27,6 +33,12 @@ function selectTab(tab) {
 	const tabPanelId = tab.getAttribute('aria-controls');
 	const tabPanel = document.getElementById(tabPanelId);
 	tabPanel.setAttribute('aria-hidden', 'false');
+	const focusableItems = tabPanel.querySelectorAll('a, button');
+	if (focusableItems) {
+		focusableItems.forEach((item) => {
+			item.setAttribute('tabindex', 0);
+		})
+	}
 }
 
 function setActiveTab(e) {
