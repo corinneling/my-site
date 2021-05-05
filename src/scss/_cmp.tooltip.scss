@@ -1,4 +1,4 @@
-[role="tooltip"] {
+.header-tooltip {
   display: none;
   position: absolute;
   z-index: 2;
@@ -23,9 +23,9 @@
   }
 }
 
-button:hover + [role="tooltip"], 
-button:hover + [role="tooltip"]::before, 
-button:focus + [role="tooltip"],
-button:focus + [role="tooltip"]::before {  
+button:hover + .header-tooltip, 
+button:hover + .header-tooltip::before, 
+button:focus + .header-tooltip,
+button:focus + .header-tooltip::before {  
   display: block;
 }

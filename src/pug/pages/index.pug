@@ -11,20 +11,20 @@ block content
       header
         .heart-container
           button.hearts(aria-describedby="health-hearts")
-            .heart.heart--one
-            .heart.heart--two
-            .heart.heart--three
-            .heart.heart--four
-            .heart.heart--five
-            .heart.heart--six
-            .heart.heart--seven
-          span(role="tooltip" id="health-hearts") full health, 7 of 7 hearts filled
+            .heart.filled(data-heart-number="1")
+            .heart.filled(data-heart-number="2")
+            .heart.filled(data-heart-number="3")
+            .heart(data-heart-number="4")
+            .heart(data-heart-number="5")
+            .heart(data-heart-number="6")
+            .heart(data-heart-number="7")
+          span.header-tooltip(role="alert" aria-live="polite" id="health-hearts") 3 of 7 hearts filled
         .welcome-container
           h1 Hi, I'm Corinne!
         .days-container
           button.days-button(aria-describedby="dev-days")
             span.number-of-days _
-          span(role="tooltip" id="dev-days") days I've been a dev
+          span.header-tooltip(role="tooltip" id="dev-days") days I've been a dev
       main
         section.profile
           .intro
@@ -41,7 +41,7 @@ block content
               .bonus.clothing-bonus
                 button.clothing-bonus__button(aria-label="add fist icon (links to site with anti-racism resources)")
           .description
-            p I have a passion for collaborating with others to create accessible websites and tools, through Progressive Enhancement and meaningful user interfaces.
+            p I have a passion for collaborating with others who care about creating equitable spaces to create accessible websites and tools, through Progressive Enhancement and universal design.
         section.inventory
           .tabs
             .tabs__nav(role="tablist")
@@ -52,6 +52,8 @@ block content
               button.tabs__button(role="tab" aria-selected="false" id="tab-3" aria-controls="tab-panel-3" tabindex="-1" aria-label="Projects")
                 img.ac__img(src="../assets/img/broadsword.svg")
               button.tabs__button(role="tab" aria-selected="false" id="tab-4" aria-controls="tab-panel-4" tabindex="-1" aria-label="Interests")
+                img.ac__img(src="../assets/img/broadsword.svg")
+              button.tabs__button(role="tab" aria-selected="false" id="tab-5" aria-controls="tab-panel-5" tabindex="-1" aria-label="Fuel")
                 img.ac__img(src="../assets/img/broadsword.svg")
             .tabs__spacing
             .tabs__container(role="tabpanel" aria-hidden="false" id="tab-panel-1" aria-labelledby="tab-1")
@@ -92,6 +94,28 @@ block content
                 li.inventory-list__item My two cats
                 li.inventory-list__item Video Games
                 li.inventory-list__item Plants
+            .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-5" aria-labelledby="tab-5")
+              ul.inventory-list.inventory-list--skills.food-items
+                li.inventory-list__item
+                  button.food Cereal
+                li.inventory-list__item
+                  button.food Pierogi
+                li.inventory-list__item 
+                  button.food Brussel Sprouts
+                li.inventory-list__item
+                  button.food Red Beans & Rice
+                li.inventory-list__item
+                  button.food Waffles
+                li.inventory-list__item 
+                  button.food Burritos
+                li.inventory-list__item 
+                  button.food Sushi
+                li.inventory-list__item
+                  button.food Sweedish Fish
+                li.inventory-list__item
+                  button.food Tea
+              button.reset-hearts forget self care
+
 
 
 
