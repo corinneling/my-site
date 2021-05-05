@@ -1,5 +1,5 @@
 footer {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	bottom: 0;
 	padding: 2rem;
@@ -8,7 +8,7 @@ footer {
 	&::after {
 		content: '';
 		position: absolute;
-		bottom: 0;
+		top: 0;
 		left: 0;
 		width: 100%;
 		background-color: rgba(242, 242, 242, 0.25);

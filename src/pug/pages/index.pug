@@ -6,7 +6,8 @@ block variables
 
 block content
   .site-container
-    .background
+    .background-container
+      .background-img
     .content
       header
         .heart-container
@@ -23,7 +24,7 @@ block content
           h1 Hi, I'm Corinne!
         .days-container
           button.days-button(aria-describedby="dev-days")
-            span.number-of-days _
+            span.number-of-days 1,300+
           span.header-tooltip(role="tooltip" id="dev-days") days I've been a dev
       main
         section.profile
@@ -115,10 +116,6 @@ block content
                 li.inventory-list__item
                   button.food Tea
               button.reset-hearts forget self care
-
-
-
-
     footer
       .social-container
         a.social-link(href="#") Github
