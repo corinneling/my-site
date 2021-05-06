@@ -64,3 +64,28 @@
 		transform: scale(1, 1);
 	}
 }
+
+.reset-container {
+	max-width: 80%;
+	position: relative;
+	margin: auto;
+}
+
+.reset-hearts {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: none;
+	border:none;
+	border-radius: 0.25rem;
+	transition: all linear 200ms;
+
+	&:hover {
+		background: white;
+	}
+
+	img {
+		width: 2rem;
+		height: 2rem;
+	}
+}

@@ -65,7 +65,6 @@ block content
                 li.inventory-list__item TypeScript
                 li.inventory-list__item HTML
                 li.inventory-list__item Accessibility
-                li.inventory-list__item Accessibility Auditing
                 li.inventory-list__item CSS
                 li.inventory-list__item Sass
                 li.inventory-list__item CSS in JS
@@ -115,7 +114,9 @@ block content
                   button.food(tabindex="-1") Sweedish Fish
                 li.inventory-list__item
                   button.food(tabindex="-1") Tea
-              button.reset-hearts forget self care
+              .reset-container
+                button.reset-hearts(aria-label="critical hit")
+                  img(src="../assets/img/cute-skull.svg")
     footer
       .social-container
         a.social-link(href="#") Github
