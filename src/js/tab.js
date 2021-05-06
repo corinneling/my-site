@@ -33,11 +33,14 @@ function selectTab(tab) {
 	const tabPanelId = tab.getAttribute('aria-controls');
 	const tabPanel = document.getElementById(tabPanelId);
 	tabPanel.setAttribute('aria-hidden', 'false');
+
 	const focusableItems = tabPanel.querySelectorAll('a, button');
 	if (focusableItems) {
 		focusableItems.forEach((item) => {
 			item.setAttribute('tabindex', 0);
-		})
+		});
+
+		focusNextTabAfterContent(tab);
 	}
 }
 
@@ -48,13 +51,16 @@ function setActiveTab(e) {
 function setActiveTabKeyDown(e) {
 	const tabButtons = document.querySelectorAll('[role=tab]');
 	const currentTabIndex = [...tabButtons].indexOf(e.target);
-	let nextTab = e.key === 'ArrowLeft' ? tabButtons[currentTabIndex - 1] : e.key === 'ArrowRight' ? tabButtons[currentTabIndex + 1] : null;
-	
+	let nextTab = e.key === 'ArrowLeft' 
+		? tabButtons[currentTabIndex - 1] 
+		: e.key === 'ArrowRight' 
+			? tabButtons[currentTabIndex + 1] 
+			: null;
+
 	if (nextTab) {
 		nextTab.focus();
+		selectTab(nextTab);
 	}
-	
-	selectTab(nextTab);
 }
 
 export function handleTabClick(tabButtons) {
@@ -68,3 +74,40 @@ export function handleKeyDown(tabButtons) {
 		button.addEventListener('keydown', setActiveTabKeyDown)
 	});
 }
+
+
+function focusNextTabAfterContent(tab) {
+	const tabButtons = document.querySelectorAll('[role=tab]');
+	const currentTabIndex = [...tabButtons].indexOf(tab);
+
+	// get focusable items in current tab panel
+	const tabPanelId = tab.getAttribute('aria-controls');
+	const tabPanel = document.getElementById(tabPanelId);
+	const panelFocusItems = tabPanel.querySelectorAll('a, button');
+	const lastFocusItem = panelFocusItems[panelFocusItems.length - 1]
+
+	panelFocusItems.forEach((item) => {
+		item.addEventListener('keydown', (e) => {
+			if (e.key === 'Tab' && (document.activeElement === lastFocusItem)) {
+				const lastTab = tabButtons[tabButtons.length - 1];
+				let nextTab = tabButtons[currentTabIndex] !== lastTab
+					? tabButtons[currentTabIndex + 1]
+					: null;
+
+				console.log(nextTab, 'nextTab');
+				if (nextTab) {
+					selectTab(nextTab);
+					nextTab.focus();
+				}
+			}
+		})
+	}); 
+}
+
+// logical focus order
+// if on Button1 and user tabs into tab content (because content has a link) focus moves to the link
+// then if user tabs out of content user is taken to Button2
+// if on Button2 and user tabs into tab content (because content has a link) focus moves to the link
+// then if user tabs out of content user is taken to button Button3
+// if on Button3 and user tabs into tab content (because content has a link) focus moves to the link
+// then if user tabs out of content user is taken to Button1
