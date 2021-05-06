@@ -1,0 +1,73 @@
+.tabs
+  .tabs__nav(role="tablist")
+    button.tabs__button(role="tab" aria-selected="true" id="tab-1" aria-controls="tab-panel-1" tabindex="0" aria-label="Skills")
+      img.ac__img(src="../assets/img/broadsword.svg")
+    button.tabs__button(role="tab" aria-selected="false" id="tab-2" aria-controls="tab-panel-2" tabindex="-1" aria-label="Tooling")
+      img.ac__img(src="../assets/img/broadsword.svg")
+    button.tabs__button(role="tab" aria-selected="false" id="tab-3" aria-controls="tab-panel-3" tabindex="-1" aria-label="Projects")
+      img.ac__img(src="../assets/img/broadsword.svg")
+    button.tabs__button(role="tab" aria-selected="false" id="tab-4" aria-controls="tab-panel-4" tabindex="-1" aria-label="Interests")
+      img.ac__img(src="../assets/img/broadsword.svg")
+    button.tabs__button(role="tab" aria-selected="false" id="tab-5" aria-controls="tab-panel-5" tabindex="-1" aria-label="Fuel")
+      img.ac__img(src="../assets/img/broadsword.svg")
+  .tabs__spacing
+  .tabs__container(role="tabpanel" aria-hidden="false" id="tab-panel-1" aria-labelledby="tab-1")
+    ul.inventory-list.inventory-list--skills
+      li.inventory-list__item Node JS
+      li.inventory-list__item ES5/ES6
+      li.inventory-list__item React
+      li.inventory-list__item TypeScript
+      li.inventory-list__item HTML
+      li.inventory-list__item Accessibility
+      li.inventory-list__item CSS
+      li.inventory-list__item Sass
+      li.inventory-list__item CSS in JS
+      li.inventory-list__item Mentoring
+  .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-2" aria-labelledby="tab-2")
+    ul.inventory-list.inventory-list--skills
+      li.inventory-list__item Webpack
+      li.inventory-list__item Babel
+      li.inventory-list__item Mocha & Chai
+      li.inventory-list__item Jest
+      li.inventory-list__item Cypress
+  .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-3" aria-labelledby="tab-3")
+    ul.inventory-list.inventory-list--projects
+      li.inventory-list__item
+        a(tabindex="-1" href="https://github.com/corinneling/whirligiggle") Whirligiggle: Accessible Carousel
+      li.inventory-list__item
+        a(tabindex="-1" href="https://docs.google.com/presentation/d/1s-Fl5Uv_IEp-aYiecrXmXLFHgxtmFO4lxGhWMnWLle8/edit?usp=sharing") Accessibility Advocacy Conference Presentation
+      li.inventory-list__item
+        a(tabindex="-1" href="https://github.com/corinneling/frontend-test-env") Frontend Test Environment
+      li.inventory-list__item
+        a(tabindex="-1" href="https://sparkbox.com/foundry/semantic_tags_aria_attributes_descriptive_links_for_website_accessibility") Accessible Components with Progressive Enhancement
+  .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-4" aria-labelledby="tab-4")
+    ul.inventory-list.inventory-list--skills
+      li.inventory-list__item Painting
+      li.inventory-list__item Reading
+      li.inventory-list__item Hiking
+      li.inventory-list__item My two cats
+      li.inventory-list__item Video Games
+      li.inventory-list__item Plants
+  .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-5" aria-labelledby="tab-5")
+    ul.inventory-list.inventory-list--skills.food-items
+      li.inventory-list__item
+        button.food(tabindex="-1") Cereal
+      li.inventory-list__item
+        button.food(tabindex="-1") Pierogi
+      li.inventory-list__item 
+        button.food(tabindex="-1") Brussel Sprouts
+      li.inventory-list__item
+        button.food(tabindex="-1") Red Beans & Rice
+      li.inventory-list__item
+        button.food(tabindex="-1") Waffles
+      li.inventory-list__item 
+        button.food(tabindex="-1") Burritos
+      li.inventory-list__item 
+        button.food(tabindex="-1") Sushi
+      li.inventory-list__item
+        button.food(tabindex="-1") Sweedish Fish
+      li.inventory-list__item
+        button.food(tabindex="-1") Tea
+    .reset-container
+      button.reset-hearts(aria-label="critical hit")
+        img(src="../assets/img/cute-skull.svg")
