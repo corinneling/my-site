@@ -2,9 +2,13 @@
   h2 Web Developer
   p 5 years experience
   .stats
-    p
-    .bonus.clothing-bonus
-      button.clothing-bonus__button(aria-label="weather (connect to a weather app api to get the temperature in dayton)")
+    .weather
+      button.weather__button(aria-describedby="icon-for-weather")
+        img.weather__icon(src="")
+      span.weather-tooltip(role="tooltip" id="icon-for-weather") 
+      p.weather-info
+        span.weather-info__temp
+        span.weather-info__city
     .bonus.clothing-bonus
       button.clothing-bonus__button(aria-label="nb clothing bonus: +1 effectiveness for every clothing item")
     .bonus.clothing-bonus
