@@ -1,0 +1,64 @@
+.stats {
+	margin: 1.5rem 0 2rem 2rem;
+
+	button {
+		font-size: 1rem;
+	}
+}
+
+.stats__item {
+	margin-bottom: 1.5rem;
+	position: relative;
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 0.875rem;
+    display: inline-block;
+    max-width: 70%;
+    margin-left: 1rem;
+  }
+}
+
+.stats__button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.tooltip--stats {
+	top: -1.5rem;
+	left: -2.25rem;
+	padding: 0 0.5rem;
+
+	&::before {
+		bottom: -0.35rem;
+		left: 45%;
+		border-left: 0.35rem solid transparent;
+		border-right: 0.35rem solid transparent; 
+		border-top: 0.35rem solid rgba(242, 242, 242, 0.25); 
+	}
+}
+
+.pride-icon {
+	height: 2rem;
+	width: 2.25rem;
+}
+
+#icon-for-pride {
+  left: -1.875rem;
+}
+
+#icon-for-book {
+  left: -2.75rem;
+}
+
+.book-icon {
+	height: 3rem;
+	width: 2.5rem;
+}
+
+.pride-icon.pride-icon-nonbinary {
+	height: 3rem;
+	width: 5rem;
+}

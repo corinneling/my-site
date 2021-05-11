@@ -1,9 +1,7 @@
-.header-tooltip {
+.tooltip {
   display: none;
   position: absolute;
   z-index: 2;
-  bottom: -1.5rem;
-  padding: 0.125rem 0.5rem;
   border-radius: 0.25rem;
   background: rgba(242, 242, 242, 0.25);
   color: white;
@@ -13,19 +11,27 @@
     content: '';
     display: none;
     position: absolute;
-    top: -0.5rem;
-    left: 50%;
     width: 0; 
     height: 0; 
+  }
+}
+
+.tooltip-button:hover + .tooltip, 
+.tooltip-button:hover + .tooltip::before, 
+.tooltip-button:focus + .tooltip,
+.tooltip-button:focus + .tooltip::before {  
+  display: block;
+}
+
+.header-tooltip {
+  bottom: -1.5rem;
+  padding: 0.125rem 0.5rem;
+
+  &::before {
+    top: -0.5rem;
+    left: 50%;
     border-left: 0.5rem solid transparent;
     border-right: 0.5rem solid transparent; 
     border-bottom: 0.5rem solid rgba(242, 242, 242, 0.25); 
   }
-}
-
-button:hover + .header-tooltip, 
-button:hover + .header-tooltip::before, 
-button:focus + .header-tooltip,
-button:focus + .header-tooltip::before {  
-  display: block;
 }
