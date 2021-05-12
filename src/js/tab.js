@@ -4,7 +4,6 @@ function resetPreviousActiveTab() {
 		const activeTab = button.getAttribute('aria-selected');
 		if (activeTab === 'true') {
 			button.setAttribute('aria-selected', 'false');
-			button.setAttribute('tabindex', -1);
 		}
 	})
 }
@@ -28,7 +27,6 @@ function hidePreviousTabPanel() {
 function selectTab(tab) {
 	resetPreviousActiveTab();
 	tab.setAttribute('aria-selected', 'true');
-	tab.setAttribute('tabindex', 0);
 	hidePreviousTabPanel();
 	const tabPanelId = tab.getAttribute('aria-controls');
 	const tabPanel = document.getElementById(tabPanelId);
