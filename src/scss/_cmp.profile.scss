@@ -1,5 +1,10 @@
 .intro {
 	margin-top: 1rem;
+	padding: 0 3rem;
+
+	@media (min-width: 650px) {
+		padding: 0;
+	}
 }
 
 .description {
@@ -9,8 +14,11 @@
 	background: rgba(0, 0, 0, 0.5);
 	border: 1px solid rgba(0, 0, 0, 0.5);
 	position: relative;
-	width: 110%;
 	padding-right: 2rem;
+
+	@media (min-width: 650px) {
+		width: 110%;
+	}
 
 	&::before {
 		background: none;
@@ -26,7 +34,8 @@
 	}
 
 	p {
-		font-size: 1rem;
-		padding-right: 2rem;
+		@media (min-width: 650px) {
+			padding-right: 2rem;
+		}
 	}
 }

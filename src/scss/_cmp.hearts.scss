@@ -1,9 +1,15 @@
 .heart-container {
 	grid-column: span 1;
-	position: relative;
-	top: -2rem;
+	position: absolute;
+	top: 0.75rem;
+	left: 0;
 	display: flex;
 	justify-content: center;
+
+	@media (min-width: 650px) {
+		position: relative;
+		top: -2rem;
+	}
 
 	.hearts {
 		width: 11rem;
@@ -15,11 +21,6 @@
 		&:hover {
 			transform: scale(1.05);
 		}
-	}
-
-	@media (min-width: 569px) {
-		top: 0;
-		margin-top: 0;
 	}
 
 	.heart {

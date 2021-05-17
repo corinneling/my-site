@@ -54,7 +54,11 @@ h6 {
 }
 
 p {
-  font-size: 1rem;
   margin: 0.25rem;
   line-height: 1.5;
+  font-size: 1.125rem;
+
+  @media (min-width: 650px) {
+    font-size: 1rem;
+	}
 }

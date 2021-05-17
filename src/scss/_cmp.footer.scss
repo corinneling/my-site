@@ -1,9 +1,14 @@
 footer {
-	position: absolute;
 	width: 100%;
-	bottom: 0;
 	padding: 2rem;
   background: rgba(36 ,42 ,37, 0.7);
+	margin-top: 3rem;
+
+	@media (min-width: 845px) {
+		position: absolute;
+		bottom: 0;
+		margin-top: 0;
+	}
 
 	&::after {
 		content: '';
@@ -14,14 +19,31 @@ footer {
 		background-color: rgba(242, 242, 242, 0.25);
 		height: 0.125rem;
 	}  
-}
 
-.social-link {
-  float: right;
+	.social-container {
+		display: flex;
+		justify-content: flex-end;
+
+		@media (max-width: 650px) {
+			padding-bottom: 1rem;
+			align-items: center;
+			justify-content: center;
+		}
+	}
 }
 
 .social-link {
   color: white;
   margin-right: 3rem;
   position: relative;
+
+	@media (max-width: 650px) {
+		font-size: 1.25rem;
+	}
+
+	&:last-of-type {
+		@media (max-width: 650px) {
+			margin-right: 0;
+		}
+	}
 }
