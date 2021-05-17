@@ -22,17 +22,6 @@ footer {
 
 .social-link {
   color: white;
-  margin-right: 3.5rem;
+  margin-right: 3rem;
   position: relative;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: -0.125rem;
-    right: -2rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 50%;
-    background: #999;
-  }
 }
