@@ -1,8 +1,7 @@
 require('dotenv').config();
 
 const getWeather = () => {
-  console.log(process.env.WEATHER, 'process.env.WEATHER_KEY');
-  return fetch(`https://api.openweathermap.org/data/2.5/weather?id=4509884&units=imperial&appid=f6eb6380698d8fd022e542564ad398b4`)
+  return fetch(`https://api.openweathermap.org/data/2.5/weather?id=4509884&units=imperial&appid=${process.env.WEATHER_KEY}`)
   .then(response => {
     if (response.ok) {
       return response.json();
