@@ -2,8 +2,9 @@ const announceIncrease = (firstEmptyHeart, numberOfHearth) => {
   const heartAlert = document.querySelector('#health-hearts');
   const numberFilled = firstEmptyHeart.getAttribute('data-heart-number');
   const noHeartsFilled = !firstEmptyHeart.classList.contains('filled');
+  const noInitialHeartsFilled = !firstEmptyHeart.classList.contains('filled-on-load');
 
-  if (noHeartsFilled) {
+  if (noHeartsFilled && noInitialHeartsFilled) {
     heartAlert.innerHTML = `health lost: 0 of ${numberOfHearth} filled`;
   } else {
     heartAlert.innerHTML = `health increased: ${numberFilled} of ${numberOfHearth} filled`;
@@ -15,7 +16,10 @@ const increaseHealth = () => {
   const hearts = document.querySelectorAll('.heart');
 
   hearts.forEach((heart) => {
-    if (!heart.classList.contains('filled')) {
+    const noHeartsFilled = !heart.classList.contains('filled');
+    const noInitialHeartsFilled = !heart.classList.contains('filled-on-load');
+  
+    if (noHeartsFilled && noInitialHeartsFilled) {
       emptyHearts.push(heart);
     }
   });
@@ -36,7 +40,7 @@ const resetHealth = () => {
   const hearts = document.querySelectorAll('.heart');
 
   hearts.forEach((heart) => {
-    heart.classList.remove('filled');
+    heart.classList.remove('filled', 'filled-on-load');
   });
 
   announceIncrease(hearts[0], hearts.length);
