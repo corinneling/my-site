@@ -24,6 +24,33 @@
   background: none;
   border: none;
   padding: 0;
+	position: relative;
+
+  &::after {
+    content: attr(aria-label);
+    display: none;
+    position: absolute;
+		bottom: 0.2rem;
+    left: 125%;
+		color: #fff;
+		background: rgba(242, 242, 242, 0.25);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0.25rem 0.75rem;
+    white-space: nowrap;
+    border-radius: 0.125rem;
+  }
+
+	&--book::after {
+		bottom: 0.875rem;
+	}
+
+  &:hover::after,
+	&:hover::before,
+  &:focus::after,
+ 	&:focus::before {
+    display: block;
+  }
 }
 
 .tooltip--stats {
@@ -40,25 +67,13 @@
 	}
 }
 
-.pride-icon {
-	height: 2rem;
-	width: 2.25rem;
-}
-
-#icon-for-pride {
-  left: -1.875rem;
-}
-
-#icon-for-book {
-  left: -2.75rem;
-}
-
 .book-icon {
 	height: 3rem;
 	width: 2.5rem;
 }
 
-.pride-icon.pride-icon-nonbinary {
-	height: 3rem;
-	width: 5rem;
+.pride-icon {
+	height: 1.5rem;
+	width: 3rem;
+	margin-left: -0.25rem;
 }
