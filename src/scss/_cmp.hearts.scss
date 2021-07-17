@@ -1,5 +1,5 @@
 .heart-container {
-	grid-column: span 1;
+	grid-column: span 2;
 	position: absolute;
 	top: 0.75rem;
 	left: 0;
@@ -12,7 +12,6 @@
 	}
 
 	.hearts {
-		width: 11rem;
 		background: transparent;
 		border: none;
 		transition: all 200ms linear;
@@ -32,11 +31,11 @@
 	}
 
 	.heart.filled-on-load {
-		background-image: url("data:image/svg+xml,	%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D2122E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='heart'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'%3E%3C/path%3E%3C/svg%3E");
+		background-image: url("data:image/svg+xml,	%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff5050' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='heart'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'%3E%3C/path%3E%3C/svg%3E");
 	}
 
   .heart.filled {
-    background-image: url("data:image/svg+xml,	%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D2122E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='heart'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,	%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff5050' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='heart'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'%3E%3C/path%3E%3C/svg%3E");
     animation: heartShirnk 500ms cubic-bezier(0.71, 0.55, 0.12, 0.97) 50ms both;
 	}
 }
@@ -70,12 +69,25 @@
 	right: 0;
 	bottom: 0;
 	background: none;
-	border:none;
-	border-radius: 0.25rem;
 	transition: all linear 200ms;
+	border-radius: 0.25rem;
+	padding: 0.25rem 0.3rem 0;
+	background: none;
+	border: none;
 
-	&:hover {
-		background: white;
+	&:after {
+		content: attr(aria-label);
+		position: absolute;
+		right: -5.5rem;
+		top: 0.25rem;
+		color: white;
+		width: 200%;
+		display: none;
+		text-align: left;
+	}
+
+	&:hover:after {
+		display: block;
 	}
 
 	img {

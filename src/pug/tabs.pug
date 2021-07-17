@@ -1,7 +1,7 @@
 .tabs
   .tabs__nav(role="tablist")
     button.tabs__button(role="tab" aria-selected="true" id="tab-1" aria-controls="tab-panel-1" aria-label="Skills")
-      img.tabs__nav-icons(src="../assets/img/tab-nav/skills.png")
+      img.tabs__nav-icon(src="../assets/img/tab-nav/skills.png")
     button.tabs__button(role="tab" aria-selected="false" id="tab-2" aria-controls="tab-panel-2" aria-label="Tooling")
       img.tabs__nav-icon(src="../assets/img/tab-nav/tooling.png")
     button.tabs__button(role="tab" aria-selected="false" id="tab-3" aria-controls="tab-panel-3" aria-label="Projects")
@@ -48,7 +48,7 @@
         img(src="../assets/img/projects/spider.png")
         a(tabindex="-1" href="#") Website Workshop: Become a Coding Spider
   .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-4" aria-labelledby="tab-4")
-    ul.inventory-list.inventory-list--skills
+    ul.inventory-list.inventory-list--interests
       li.inventory-list__item 
         img(src="../assets/img/interests/painting.png")
         p Painting
@@ -106,5 +106,5 @@
           img(src="../assets/img/fuel/tea.png")
           p Tea
     .reset-container
-      button.reset-hearts(aria-label="critical hit - reset hearts" tabindex="-1")
+      button.reset-hearts(aria-label="critical hit. reset hearts" tabindex="-1")
         img(src="../assets/img/cute-skull.svg" aria-hidden="true" alt="")

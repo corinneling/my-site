@@ -11,7 +11,7 @@ const announceIncrease = (firstEmptyHeart, numberOfHearth) => {
   }
 }
 
-const increaseHealth = () => {
+const increaseHealth = (e) => {
   const emptyHearts = [];
   const hearts = document.querySelectorAll('.heart');
 
@@ -25,9 +25,11 @@ const increaseHealth = () => {
   });
 
   if(emptyHearts.length <= 0) return;
+
   const firstEmptyHeart = emptyHearts[0]
   firstEmptyHeart.classList.add('filled');
   announceIncrease(firstEmptyHeart, hearts.length);
+  e.target.classList.add('nom-nom-nom')
 }
 
 export function handleHealth(buttons) {
@@ -38,9 +40,16 @@ export function handleHealth(buttons) {
 
 const resetHealth = () => {
   const hearts = document.querySelectorAll('.heart');
+  const foodButtons = document.querySelectorAll('.food');
 
   hearts.forEach((heart) => {
     heart.classList.remove('filled', 'filled-on-load');
+  });
+
+  foodButtons.forEach((button) => {
+    if (button.classList.contains('nom-nom-nom')) {
+      button.classList.remove('nom-nom-nom')
+    }
   });
 
   announceIncrease(hearts[0], hearts.length);
