@@ -29,7 +29,7 @@
 
   &::before {
     content: attr(aria-label);
-    font-family: 'Victor Mono';
+		font-family: 'Montserrat', sans-serif;
 		transform: translateX(-120%);
     position: absolute;
 		opacity: 0;

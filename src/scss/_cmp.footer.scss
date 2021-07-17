@@ -6,8 +6,13 @@ footer {
 	position: relative;
 	bottom: 0;
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	color: white;
+
+	@media (max-width: 650px) {
+		flex-direction: column;
+	}
 
 	&::after {
     content: '';
@@ -34,6 +39,10 @@ footer {
 	.attribute-container {
 		display: inline-block;
 
+		@media (max-width: 650px) {
+			margin-bottom: 2.5rem;
+		}
+
 		p {
 			line-height: 1.75;
 		}
@@ -53,26 +62,22 @@ footer {
 			z-index: 2;
 		}
 
-		&:hover {
-			color: #292643;
-		}
-	
 		&:after {
 			content: "";
 			display: block;
 			position: absolute;
 			margin: 0;
-			left: -5%;
-			bottom: -0.25rem;
+			left: -2.5%;
+			bottom: -0.125rem;
 			height: 0.12rem;
-			width: 110%;
+			width: 105%;
 			transition: all 200ms ease-in;
 			background-color: white;
 			z-index: 1;
 		}
 		
 		&:hover:after {
-			height: 1.5rem;
+			height: 1.4rem;
 			background-color: #ff5050;
 		}
 	}
@@ -81,10 +86,6 @@ footer {
 .social-link {
   margin-right: 3rem;
 	line-height: 1.75;
-
-	&:after {
-		bottom: -0.125rem;
-	}
 
 	&:hover:after {
 		height: 1.75rem;
