@@ -1,5 +1,5 @@
 .tooltip {
-  display: none;
+  opacity: 0;
   position: absolute;
   z-index: 2;
   border-radius: 0.25rem;
@@ -21,6 +21,7 @@
 .tooltip-button:focus + .tooltip,
 .tooltip-button:focus + .tooltip::before {  
   display: block;
+  opacity: 1;
 }
 
 .header-tooltip {

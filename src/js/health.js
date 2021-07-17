@@ -28,8 +28,8 @@ const increaseHealth = (e) => {
 
   const firstEmptyHeart = emptyHearts[0]
   firstEmptyHeart.classList.add('filled');
+  e.target.classList.add('nom-nom-nom');
   announceIncrease(firstEmptyHeart, hearts.length);
-  e.target.classList.add('nom-nom-nom')
 }
 
 export function handleHealth(buttons) {
