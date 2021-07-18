@@ -20,7 +20,7 @@
 
 		&::before {
 			content: attr(aria-label);
-			font-family: 'Victor Mono';
+			font-family: 'Montserrat', sans-serif;
 			position: absolute;
 			display: none;
 			opacity: 0;

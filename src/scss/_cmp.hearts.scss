@@ -88,6 +88,7 @@
 		text-align: left;
 	}
 
+	&:focus:after,
 	&:hover:after {
 		display: block;
 	}

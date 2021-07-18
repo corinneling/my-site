@@ -4,6 +4,7 @@ import { handleHealth, handleResetHealth } from './health';
 import { addWeather } from './weather';
 
 const tabButtons = document.querySelectorAll('[role=tab]');
+const tabPanels = document.querySelectorAll('[role=tabpanel]');
 
 handleTabClick(tabButtons);
 handleKeyDown(tabButtons);
