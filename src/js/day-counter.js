@@ -1,7 +1,7 @@
-function getBusinessDays(startDate, endDate) {
+function getBusinessDays(startDate, currentDate) {
   let numberOfDays = 0;
 
-  while (startDate <= endDate) {
+  while (startDate <= currentDate) {
     const dayOfWeek = startDate.getDay();
     const weekendDay = (dayOfWeek === 6) || (dayOfWeek === 0);
     if(!weekendDay) numberOfDays++;
@@ -13,8 +13,8 @@ function getBusinessDays(startDate, endDate) {
 
 export function dayCounter() {
   const daysContainer = document.querySelector('.number-of-days');
-  const startDate = new Date('1-01-2016');
+  const startDate = new Date('January 04, 2016 09:00:00');
   const today = new Date();
-  const businessDays = getBusinessDays(startDate, today)
+  const businessDays = getBusinessDays(startDate, today);
   daysContainer.innerHTML = businessDays.toLocaleString();
 }
