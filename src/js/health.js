@@ -5,9 +5,9 @@ const announceIncrease = (firstEmptyHeart, numberOfHearth) => {
   const noInitialHeartsFilled = !firstEmptyHeart.classList.contains('filled-on-load');
 
   if (noHeartsFilled && noInitialHeartsFilled) {
-    heartAlert.innerHTML = `health lost: 0 of ${numberOfHearth} filled`;
+    heartAlert.innerHTML = `health lost: 0 of ${numberOfHearth} hearts filled`;
   } else {
-    heartAlert.innerHTML = `health increased: ${numberFilled} of ${numberOfHearth} filled`;
+    heartAlert.innerHTML = `health increased: ${numberFilled} of ${numberOfHearth} hearts filled`;
   }
 }
 
@@ -32,12 +32,6 @@ const increaseHealth = (e) => {
   announceIncrease(firstEmptyHeart, hearts.length);
 }
 
-export function handleHealth(buttons) {
-  buttons.forEach((button) => {
-    button.addEventListener('click', increaseHealth);
-  })
-}
-
 const resetHealth = () => {
   const hearts = document.querySelectorAll('.heart');
   const foodButtons = document.querySelectorAll('.food');
@@ -53,6 +47,12 @@ const resetHealth = () => {
   });
 
   announceIncrease(hearts[0], hearts.length);
+}
+
+export function handleHealth(buttons) {
+  buttons.forEach((button) => {
+    button.addEventListener('click', increaseHealth);
+  })
 }
 
 export function handleResetHealth(resetButton) {
