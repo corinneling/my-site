@@ -15,3 +15,14 @@ export function getHeartsDOM() {
     <button class="food">Destroy Health</button>
   `;
 }
+ 
+export function getDaysDOM() {
+  return document.body.innerHTML = `
+  <div class="days-container">
+    <div class="days-button tooltip-button" aria-describedby="dev-days" tabindex="0">
+      <span data-testid="number-of-days" class="number-of-days">0</span>
+    </div>
+    <span class="tooltip header-tooltip" id="dev-days">days I've been a dev</span>
+  </div>
+  `;
+}
