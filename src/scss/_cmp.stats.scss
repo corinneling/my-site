@@ -1,5 +1,7 @@
 .stats {
-	margin: 1.5rem 0 2rem 2rem;
+	display: inline-block;
+	position: relative;
+	z-index: 2;
 
 	button {
 		font-size: 1rem;
@@ -31,9 +33,9 @@
     display: none;
     position: absolute;
 		bottom: 0.2rem;
-    left: 125%;
+    left: 110%;
 		color: #fff;
-		background: rgba(242, 242, 242, 0.25);
+		background: rgba(70, 70, 70, 0.664);
     font-size: 0.875rem;
     line-height: 1.5;
     padding: 0.25rem 0.75rem;
@@ -42,7 +44,7 @@
   }
 
 	&--book::after {
-		bottom: 0.875rem;
+		bottom: 0.25rem;
 	}
 
   &:hover::after,
@@ -68,12 +70,10 @@
 }
 
 .book-icon {
-	height: 3rem;
-	width: 2.5rem;
+	width: 58px;
 }
 
 .pride-icon {
-	height: 1.5rem;
-	width: 3rem;
+	width: 58px;
 	margin-left: -0.25rem;
 }
