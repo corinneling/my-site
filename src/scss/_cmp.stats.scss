@@ -1,18 +1,19 @@
 .stats {
-	display: inline-block;
-	position: relative;
-	z-index: 2;
-
 	button {
 		font-size: 1rem;
 	}
 }
 
 .stats__item {
-	margin-bottom: 1.5rem;
 	position: relative;
   display: flex;
   align-items: center;
+	width: 50%;
+
+	@media (min-width: 650px) {
+		margin-bottom: 1.5rem;
+		width: auto;
+	}
 
   p {
     font-size: 1rem;
@@ -35,16 +36,26 @@
 		bottom: 0.2rem;
     left: 110%;
 		color: #fff;
-		background: rgba(70, 70, 70, 0.664);
+		background: rgba(70, 70, 70, 0.75);
     font-size: 0.875rem;
     line-height: 1.5;
     padding: 0.25rem 0.75rem;
     white-space: nowrap;
     border-radius: 0.125rem;
+
+		@media (max-width: 650px) {
+			display: block;
+			background: transparent;
+			left: 100%;
+		}
   }
 
 	&--book::after {
 		bottom: 0.25rem;
+	
+		@media (max-width: 650px) {
+			left: 75%;
+		}
 	}
 
   &:hover::after,

@@ -1,9 +1,30 @@
 .intro {
-	margin-top: 1rem;
-	padding: 0 3rem;
+	margin-top: 0;
 
 	@media (min-width: 650px) {
-		padding: 0;
+		margin-top: 1rem;
+	}
+
+	&__heading,
+	&__description {
+		text-align: center;
+
+		@media (min-width: 650px) {
+			text-align: left;
+		}
+	}
+}
+
+
+.info-wrapper {
+	margin: 1.5rem 0 0 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	@media (min-width: 650px) {
+		flex-direction: row;
+		margin: 0 0 0 2rem;
 	}
 }
 
@@ -41,25 +62,56 @@
 }
 
 .profile-photo {
-	display: inline-block;
+	display: block;
 	position: relative;
-	width: 18.5rem;
-	margin-left: 2rem;
+	width: 15rem;
+	height: 15rem;
 	background: rgba(41, 38, 67, 0.8);
 	border-radius: 50%;
 	padding-top: 1rem;
-	height: 18.5rem;
+	order: 1;
+
+	@media (min-width: 650px) {
+		display: inline-block;
+		order: 2;
+		margin-left: 2.5rem;
+		width: 18.5rem;
+		height: 18.5rem;
+	}
 
 	&__img {
-		max-width: 17rem;
 		transform: rotateY(180deg);
 		position: absolute;
-    left: 0.875rem;
+    left: 0.25rem;
+		bottom: -0.125rem;
+		object-fit: contain;
+		width: 100%;
+		height: 13.8125rem;
+
+		@media (min-width: 650px) {
+			height: 17.8125rem;
+		}
 	}
 }
 
-.info-wrapper {
-	margin: 1.5rem 0 0 2rem;
+.stats {
 	display: flex;
-	align-items: center;
+	position: relative;
+	justify-content: center;
+	flex-wrap: wrap;
+	z-index: 2;
+	order: 2;
+	margin-top: 0.5rem;
+	width: 100%;
+	padding: 0 1rem;
+	max-width: 23rem;
+
+	@media (min-width: 650px) {
+		display: inline-block;
+		order: 1;
+		margin-top: 0;
+		padding: 0;
+		width: auto;
+		max-width: auto;
+	}
 }

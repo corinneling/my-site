@@ -1,14 +1,16 @@
 .heart-container {
 	grid-column: span 2;
 	position: absolute;
-	top: 0.75rem;
-	left: 0;
+	top: 0.5rem;
+	left: 1rem;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 
 	@media (min-width: 650px) {
 		position: relative;
 		top: 0;
+		left: 0;
+		justify-content: center;
 	}
 
 	.hearts {

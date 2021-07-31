@@ -2,13 +2,21 @@
 	display: flex;
 	align-items: center;
 	position: relative;
-	margin-bottom: 2rem;
+	width: 55%;
+
+	@media (min-width: 650px) {
+		width: auto;
+		margin-bottom: 1rem;
+	}
 
 	&__button {
 		background: none;
 		border: none;
-		margin-left: -1rem;
 		padding: 0;
+
+		@media (min-width: 650px) {
+			margin-left: -0.5rem;
+		}
 	}
 
 	&__icon {
@@ -16,7 +24,6 @@
 		width: 4rem;
 		margin-right: 0.25rem;
 		position: relative;
-		filter: grayscale(1);
 
 		&::before {
 			content: attr(aria-label);
@@ -57,7 +64,7 @@
 	}
 
 	&__city {
-		margin-left: 0.875rem;
+		margin-left: 1.25rem;
 	}
 }
 
