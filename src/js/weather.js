@@ -14,7 +14,10 @@ const getWeather = () => {
 }
 
 export async function addWeather() {
-  const data = await getWeather();
+  const url = `/netlify/functions/get-weather`;
+  const data = await fetch(url).then((res) => res.json()).catch((e) => console.log(e.message));
+
+  console.log(data, 'data')
 
   const weatherIcon = document.querySelector('.weather__icon');
   const weatherIconButton = document.querySelector('.weather__button');
