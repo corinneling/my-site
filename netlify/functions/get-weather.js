@@ -1,5 +1,4 @@
 require('dotenv').config();
-const axios = require("axios");
 const fetch = require('node-fetch');
 
 const API_ENDPOINT = `https://api.openweathermap.org/data/2.5/weather?id=4509884&units=imperial&appid=${process.env.WEATHER_KEY}`;

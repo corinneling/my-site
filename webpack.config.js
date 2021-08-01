@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
 
 const PATHS = {
   src: path.join(__dirname, './src'),
@@ -47,6 +46,5 @@ module.exports = {
         { from: 'src/assets', to: '../dist/assets/' },
       ],
     }),
-    new Dotenv(),
   ]
 };
