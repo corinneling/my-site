@@ -1,18 +1,19 @@
+require('dotenv').config();
 const axios = require("axios");
+const fetch = require('node-fetch');
 
-exports.handler = async function (event, context) {
-  console.log(event);
-  console.log(context);
+const API_ENDPOINT = `https://api.openweathermap.org/data/2.5/weather?id=4509884&units=imperial&appid=${process.env.WEATHER_KEY}`;
+
+exports.handler = async (event, context) => {
   try {
-    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?id=4509884&units=imperial&appid=${process.env.WEATHER_KEY}`);
+    const response = await fetch(API_ENDPOINT);
+    const data = await response.json();
+    return { statusCode: 200, body: JSON.stringify({ data }) };
+  } catch (error) {
+    console.log(error);
     return {
-      statusCode: 200,
-      body: JSON.stringify({ title: response.data }),
-    };
-  } catch (err) {
-    return {
-      statusCode: 404,
-      body: err.toString(),
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Failed fetching data' }),
     };
   }
 };

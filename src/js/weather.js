@@ -1,23 +1,9 @@
-require('dotenv').config();
-
-const getWeather = () => {
-  return fetch(`https://api.openweathermap.org/data/2.5/weather?id=4509884&units=imperial&appid=${process.env.WEATHER_KEY}`)
-  .then(response => {
-    if (response.ok) {
-      return response.json();
-    }
-  })
-  .then((data) => data)
-  .catch((e) => {
-    console.log(e.message);
-  });
-}
-
 export async function addWeather() {
-  const url = `/netlify/functions/get-weather`;
-  const data = await fetch(url).then((res) => res.json()).catch((e) => console.log(e.message));
+  const response = await fetch('/.netlify/functions/get-weather').then(
+      response => response.json()
+    );
 
-  console.log(data, 'data')
+  const { data } = response;
 
   const weatherIcon = document.querySelector('.weather__icon');
   const weatherIconButton = document.querySelector('.weather__button');
