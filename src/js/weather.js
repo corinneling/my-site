@@ -11,7 +11,7 @@ export async function addWeather() {
   const weatherCity = document.querySelector('.weather-info__city');
   
 
-  weatherIcon.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+  weatherIcon.setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
   weatherIconButton.setAttribute('aria-label', data.weather[0].description);
   
   weatherTemp.innerHTML = Math.trunc(data.main.temp);
