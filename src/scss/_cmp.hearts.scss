@@ -1,4 +1,5 @@
 .heart-container {
+	width: 100%;
 	grid-column: span 2;
 	position: absolute;
 	top: 0.5rem;
@@ -7,6 +8,7 @@
 	justify-content: flex-start;
 
 	@media (min-width: 650px) {
+		width: auto;
 		position: relative;
 		top: 0;
 		left: 0;
