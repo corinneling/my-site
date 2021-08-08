@@ -1,20 +1,19 @@
-function getBusinessDays(startDate, currentDate) {
+function dayCounter(startDate, today) {
   let numberOfDays = 0;
 
-  while (startDate <= currentDate) {
+  while (startDate <= today) {
     const dayOfWeek = startDate.getDay();
-    const weekendDay = (dayOfWeek === 6) || (dayOfWeek === 0);
-    if(!weekendDay) numberOfDays++;
+    numberOfDays++;
     startDate.setDate(startDate.getDate() + 1);
   }
 
   return numberOfDays;
 }
 
-export function dayCounter() {
+export function addDays() {
   const daysContainer = document.querySelector('.number-of-days');
   const startDate = new Date('January 04, 2016 09:00:00');
   const today = new Date();
-  const businessDays = getBusinessDays(startDate, today);
-  daysContainer.innerHTML = businessDays.toLocaleString();
+  const days = dayCounter(startDate, today);
+  daysContainer.innerHTML = days.toLocaleString();
 }

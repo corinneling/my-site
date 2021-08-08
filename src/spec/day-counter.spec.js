@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/dom'
 import { getDaysDOM } from './spec-helper';
-import { dayCounter } from '../js/day-counter';
+import { addDays } from '../js/day-counter';
 
 describe('Day Counter', () => {
   beforeAll(() => {
@@ -16,7 +16,7 @@ describe('Day Counter', () => {
     getDaysDOM();
     const days = screen.getByTestId('number-of-days');
     expect(days).toHaveTextContent('0');
-    dayCounter();
-    expect(days).toHaveTextContent('1,455');
+    addDays();
+    expect(days).toHaveTextContent('2,036');
   });
 });

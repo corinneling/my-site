@@ -1,5 +1,5 @@
 import { handleTabClick, handleKeyDown } from './tab';
-import { dayCounter } from './day-counter';
+import { addDays } from './day-counter';
 import { handleHealth, handleResetHealth } from './health';
 import { addWeather } from './weather';
 
@@ -15,5 +15,5 @@ const resetHeartsButton = document.querySelector('.reset-hearts');
 handleHealth(foodButtons);
 handleResetHealth(resetHeartsButton);
 
-dayCounter();
+addDays();
 addWeather();
