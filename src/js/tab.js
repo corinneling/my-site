@@ -57,6 +57,10 @@ function setActiveTabKeyDown(e) {
 		nextTab =	tabButtons[currentTabIndex + 1];
 	} else if (e.key === 'ArrowRight' && currentTabIndex === lastIndex) {
 		nextTab =	tabButtons[0];
+	} else if (e.key === 'Home') {
+		nextTab =	tabButtons[0]
+	} else if (e.key === 'End') {
+		nextTab =	tabButtons[lastIndex]
 	} else {
 		nextTab =	null
 	}
