@@ -1,17 +1,17 @@
 .tabs
-  .tabs__nav(role="tablist")
-    button.tabs__button(role="tab" aria-selected="true" id="tab-1" aria-controls="tab-panel-1" aria-label="Skills")
+  .tabs__nav(role="tablist" aria-label="My Experience and Interests")
+    button.tabs__button(role="tab" tabindex="0" aria-selected="true" id="tab-1" aria-controls="tab-panel-1" aria-label="Skills")
       img.tabs__nav-icon(src="../assets/img/tab-nav/skills.png" width="48px" height="48px" alt="" aria-hidden="true")
-    button.tabs__button(role="tab" aria-selected="false" id="tab-2" aria-controls="tab-panel-2" aria-label="Tooling")
+    button.tabs__button(role="tab" tabindex="-1" aria-selected="false" id="tab-2" aria-controls="tab-panel-2" aria-label="Tooling")
       img.tabs__nav-icon(src="../assets/img/tab-nav/tooling.png" width="48px" height="48px" alt="" aria-hidden="true")
-    button.tabs__button(role="tab" aria-selected="false" id="tab-3" aria-controls="tab-panel-3" aria-label="Projects")
+    button.tabs__button(role="tab" tabindex="-1" aria-selected="false" id="tab-3" aria-controls="tab-panel-3" aria-label="Projects")
       img.tabs__nav-icon(src="../assets/img/tab-nav/projects.png" width="48px" height="48px" alt="" aria-hidden="true")
-    button.tabs__button(role="tab" aria-selected="false" id="tab-4" aria-controls="tab-panel-4" aria-label="Interests")
+    button.tabs__button(role="tab" tabindex="-1" aria-selected="false" id="tab-4" aria-controls="tab-panel-4" aria-label="Interests")
       img.tabs__nav-icon(src="../assets/img/tab-nav/interests.png" width="48px" height="48px" alt="" aria-hidden="true")
-    button.tabs__button(role="tab" aria-selected="false" id="tab-5" aria-controls="tab-panel-5" aria-label="Fuel")
+    button.tabs__button(role="tab" tabindex="-1" aria-selected="false" id="tab-5" aria-controls="tab-panel-5" aria-label="Fuel")
       img.tabs__nav-icon(src="../assets/img/tab-nav/fuel.png" width="48px" height="48px" alt="" aria-hidden="true")
   .tabs__spacing
-  .tabs__container(role="tabpanel" aria-hidden="false" id="tab-panel-1" aria-labelledby="tab-1")
+  .tabs__container(role="tabpanel" tabindex="0" aria-hidden="false" id="tab-panel-1" aria-labelledby="tab-1")
     ul.inventory-list.inventory-list--skills
       li.inventory-list__item Node JS
       li.inventory-list__item ES5/ES6
@@ -23,14 +23,14 @@
       li.inventory-list__item Sass
       li.inventory-list__item CSS in JS
       li.inventory-list__item Mentoring
-  .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-2" aria-labelledby="tab-2")
+  .tabs__container(role="tabpanel" tabindex="-1" aria-hidden="true" id="tab-panel-2" aria-labelledby="tab-2")
     ul.inventory-list.inventory-list--skills
       li.inventory-list__item Webpack
       li.inventory-list__item Babel
       li.inventory-list__item Mocha & Chai
       li.inventory-list__item Jest
       li.inventory-list__item Cypress
-  .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-3" aria-labelledby="tab-3")
+  .tabs__container(role="tabpanel" tabindex="-1" aria-hidden="true" id="tab-panel-3" aria-labelledby="tab-3")
     ul.inventory-list.inventory-list--projects
       li.inventory-list__item
         a(tabindex="-1" href="https://github.com/corinneling/whirligiggle")
@@ -52,7 +52,7 @@
         a(tabindex="-1" href="https://docs.google.com/document/d/1iVnWE70IieuXIdrnnQyQII_Mw5Bbw4QQvEo4iQkvcuY/edit?usp=sharing")
           img(src="../assets/img/projects/spider.png" width="112px" height="112px")
           p Website Workshop: Become a Coding Spider
-  .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-4" aria-labelledby="tab-4")
+  .tabs__container(role="tabpanel" tabindex="-1" aria-hidden="true" id="tab-panel-4" aria-labelledby="tab-4")
     ul.inventory-list.inventory-list--interests
       li.inventory-list__item 
         img(src="../assets/img/interests/painting.png" width="112px" height="112px" alt="" aria-hidden="true")
@@ -72,7 +72,7 @@
       li.inventory-list__item 
         img(src="../assets/img/interests/plants.png" width="112px" height="112px" alt="" aria-hidden="true")
         p Plants
-  .tabs__container(role="tabpanel" aria-hidden="true" id="tab-panel-5" aria-labelledby="tab-5")
+  .tabs__container(role="tabpanel" tabindex="-1" aria-hidden="true" id="tab-panel-5" aria-labelledby="tab-5")
     ul.inventory-list.inventory-list--skills.food-items
       li.inventory-list__item
         button.food(tabindex="-1") 
