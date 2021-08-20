@@ -75,10 +75,18 @@ header {
 
 		&:hover {
 			transform: scale(1.05);
+
+			@media (prefers-reduced-motion) {
+				transform: scale(1);
+			}
 		}
 
 		&:hover .sun-icon {
 			transform: rotate(120deg);
+
+			@media (prefers-reduced-motion) {
+				transform: rotate(0);
+			}
 		}
 
 		.sun-icon {

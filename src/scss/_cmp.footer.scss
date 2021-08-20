@@ -57,6 +57,12 @@ footer {
 		text-decoration: none;
 		position: relative;
 
+		&:hover {
+			@media (prefers-reduced-motion) {
+				background-color: #ff5050;
+			}
+		}
+
 		span {
 			position: relative;
 			z-index: 2;
@@ -79,6 +85,11 @@ footer {
 		&:hover:after {
 			height: 1.4rem;
 			background-color: #ff5050;
+
+			@media (prefers-reduced-motion) {
+				height: 0.12rem;
+				background-color: white;
+			}
 		}
 	}
 }
@@ -89,6 +100,10 @@ footer {
 
 	&:hover:after {
 		height: 1.75rem;
+
+		@media (prefers-reduced-motion) {
+			height: 0.12rem;
+		}
 	}
 
 	@media (max-width: 650px) {
